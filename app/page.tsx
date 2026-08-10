@@ -1,3 +1,11 @@
+import Hero from "@/components/Hero";
+import Why from "@/components/Why";
+
 export default function Home() {
-  return <main>AI Safety Said Simply</main>;
+  return (
+    <main>
+      <Hero />
+      <Why />
+    </main>
+  );
 }
