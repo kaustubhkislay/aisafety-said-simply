@@ -1,0 +1,47 @@
+/* Hallmark · genre: editorial · macrostructure: Catalogue (spec-locked sections) · theme: Almanac · enrichment: none · nav: none (single page) · footer: Ft2 inline */
+@import "tailwindcss";
+
+@theme {
+  --color-paper: oklch(94% 0.008 245);
+  --color-paper-2: oklch(91% 0.01 245);
+  --color-paper-3: oklch(86% 0.012 240);
+  --color-line: oklch(74% 0.012 240);
+  --color-line-2: oklch(38% 0.018 240);
+  --color-muted: oklch(46% 0.014 245);
+  --color-ink-2: oklch(20% 0.018 245);
+  --color-ink: oklch(16% 0.02 245);
+  --color-accent: oklch(38% 0.135 250);
+  --color-focus: oklch(38% 0.135 250);
+
+  --font-display: var(--font-hanken), ui-sans-serif, sans-serif;
+  --font-body: var(--font-hanken), ui-sans-serif, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --text-display: clamp(2.5rem, 4.5vw + 1rem, 4.5rem);
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
