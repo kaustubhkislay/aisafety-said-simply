@@ -37,6 +37,35 @@ export const audiences = [
 export const theoryOfChange =
   "Lower the barrier to entry, and the ideas travel: more people who matter understand AI safety, and the conversation shifts in its favor.";
 
+export type FaqItem = { q: string; a: string };
+
+export const faq: FaqItem[] = [
+  {
+    q: "What is AI Safety Said Simply?",
+    a: "We make short, accurate explainers, interactive demos, and videos on the ideas that matter in AI safety. Everything is built to be finished in one sitting by someone without a technical background.",
+  },
+  {
+    q: "Who is this for?",
+    a: "Policymakers who brief others, educators who need teaching material, and anyone curious about AI safety who doesn't have hours to spare. If you can read a memo, you can use our material.",
+  },
+  {
+    q: "Aren't there already good AI safety explainers?",
+    a: "There is excellent material out there — but most of it is long, technical, and written for people who already understand the field. The gap isn't quality. It's accessibility.",
+  },
+  {
+    q: "What formats do you make?",
+    a: "Written explainers, interactive demos you can play with in the browser, and short videos. One topic can ship in several formats, so you can pick the one that fits how you learn or teach.",
+  },
+  {
+    q: "When do the in-production topics ship?",
+    a: "We don't promise dates. Each topic goes live when it's accurate and genuinely easy to finish. Sign up for updates below and we'll tell you the moment each one ships.",
+  },
+  {
+    q: "How can I help?",
+    a: "Tell us which topic you need, share the library with someone who'd use it, or pitch in on writing and demos. See the Get involved section, or email kaustubh.kislay@gmail.com.",
+  },
+];
+
 export const library: LibraryItem[] = [
   {
     title: "Reward hacking, in the wild",
