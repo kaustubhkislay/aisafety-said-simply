@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/content";
 
 export default function Footer() {
@@ -7,12 +8,17 @@ export default function Footer() {
         <span className="font-mono text-xs uppercase tracking-[0.12em]">
           {site.name}
         </span>
-        <a
-          href={`mailto:${site.contactEmail}`}
-          className="underline underline-offset-4 hover:text-ink"
-        >
-          {site.contactEmail}
-        </a>
+        <span className="flex flex-wrap items-baseline gap-4">
+          <Link href="/team" className="underline underline-offset-4 hover:text-ink">
+            Team
+          </Link>
+          <a
+            href={`mailto:${site.contactEmail}`}
+            className="underline underline-offset-4 hover:text-ink"
+          >
+            {site.contactEmail}
+          </a>
+        </span>
       </div>
     </footer>
   );

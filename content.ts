@@ -153,7 +153,7 @@ export const faq: FaqItem[] = [
   },
   {
     q: "Can I request a topic?",
-    a: "Yes, please do. Requests from people who need the material — a briefing next month, a course next term — move topics up the queue. Email kaustubh.kislay@gmail.com with what you need and when.",
+    a: `Yes, please do. Requests from people who need the material — a briefing next month, a course next term — move topics up the queue. Email ${site.contactEmail} with what you need and when.`,
   },
   {
     q: "Do you take positions on AI policy?",
@@ -165,7 +165,7 @@ export const faq: FaqItem[] = [
   },
   {
     q: "I spotted an error. What should I do?",
-    a: "Tell us — accuracy is the whole point. Email kaustubh.kislay@gmail.com with the piece and the problem, and we'll fix it and note the correction.",
+    a: `Tell us — accuracy is the whole point. Email ${site.contactEmail} with the piece and the problem, and we'll fix it and note the correction.`,
   },
 ];
 
@@ -230,5 +230,43 @@ export const library: LibraryItem[] = [
     hook: "If an AI could revise its own values, where would they settle — and would we like the result?",
     formats: ["Explainer"],
     status: "in-production",
+  },
+];
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  url?: string;
+};
+
+export const team: TeamMember[] = [
+  {
+    name: "Kaustubh Kislay",
+    role: "Co-founder",
+    bio: "Kaustubh is the director of the Wisconsin AI Safety Initiative. He is a generalist with a background in technical AI safety research focused on AI control and reward hacking.",
+  },
+  {
+    name: "Christine Corry",
+    role: "Co-founder",
+    bio: "Bio coming soon.",
+  },
+];
+
+export const mentees: TeamMember[] = [
+  {
+    name: "Mentee One",
+    role: "SPAR mentee",
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Mentee Two",
+    role: "SPAR mentee",
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Mentee Three",
+    role: "SPAR mentee",
+    bio: "Bio coming soon.",
   },
 ];
