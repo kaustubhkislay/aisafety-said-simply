@@ -13,7 +13,7 @@ export const site = {
   tagline: "Complex AI safety topics, explained in forms people actually finish.",
   description:
     "Short explainers, interactive demos, and videos on the ideas that matter in AI safety — built for policymakers, journalists, educators, and anyone without hours to spare.",
-  contactEmail: "kaustubh.kislay@gmail.com",
+  contactEmail: "contact@aisafetysaidsimply.com",
 };
 
 export const audiences = [

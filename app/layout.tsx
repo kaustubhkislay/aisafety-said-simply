@@ -20,9 +20,24 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.aisafetysaidsimply.com"),
   title: "AI Safety Said Simply",
   description:
     "Complex AI safety topics, explained in short, engaging forms — explainers, demos, and videos for policymakers, journalists, educators, and the public.",
+  openGraph: {
+    title: "AI Safety Said Simply",
+    description:
+      "Complex AI safety topics, explained in short, engaging forms — explainers, demos, and videos for policymakers, journalists, educators, and the public.",
+    url: "/",
+    siteName: "AI Safety Said Simply",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "AI Safety Said Simply",
+    description:
+      "Complex AI safety topics, explained in short, engaging forms — explainers, demos, and videos.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
