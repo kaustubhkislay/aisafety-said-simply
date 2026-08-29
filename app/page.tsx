@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main className="flex min-h-full flex-col">
       <Hero />
-      <Why />
       <Library />
+      <Why />
       <Institutions />
       <GetInvolved />
       <Faq />

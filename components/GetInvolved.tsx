@@ -4,7 +4,7 @@ import SignupForm from "@/components/SignupForm";
 export default function GetInvolved() {
   return (
     <section id="updates" className="mx-auto w-full max-w-5xl px-6 py-16 sm:py-20">
-      <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-ink">
+      <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
         Get involved
       </h2>
       <div className="mt-10 grid gap-10 sm:grid-cols-2">

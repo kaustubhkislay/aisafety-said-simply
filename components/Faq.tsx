@@ -4,7 +4,7 @@ export default function Faq() {
   return (
     <section id="faq" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-        <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-ink">
+        <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
           Questions, answered
         </h2>
         <div className="mt-10 max-w-3xl">

@@ -4,7 +4,7 @@ export default function Library() {
   return (
     <section id="library" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-        <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-ink">
+        <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
           The library
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
@@ -29,22 +29,12 @@ export default function Library() {
                     </span>
                   )}
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold leading-snug text-ink">
+                <h3 className="mt-4 font-display text-2xl font-medium leading-snug text-ink">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   {item.hook}
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {item.formats.map((f) => (
-                    <span
-                      key={f}
-                      className="border border-line px-2 py-0.5 font-mono text-xs text-ink-2"
-                    >
-                      {f}
-                    </span>
-                  ))}
-                </div>
               </>
             );
             return item.status === "live" && item.url ? (

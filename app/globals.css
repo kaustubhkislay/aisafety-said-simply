@@ -1,19 +1,20 @@
-/* Hallmark · genre: editorial · macrostructure: Catalogue (spec-locked sections) · theme: Almanac · enrichment: none · nav: none (single page) · footer: Ft2 inline */
+/* Hallmark · genre: editorial · macrostructure: Journal Front (masthead + library-first) · theme: custom warm-journal · enrichment: none · nav: none (single page) · footer: Ft2 inline
+ * pre-emit critique: P4 H5 E4 S4 R5 V4 · differs from Almanac on: paper band (cool→warm), display style (sans→roman-serif), accent hue (cool-blue→warm-brick) */
 @import "tailwindcss";
 
 @theme {
-  --color-paper: oklch(94% 0.008 245);
-  --color-paper-2: oklch(91% 0.01 245);
-  --color-paper-3: oklch(86% 0.012 240);
-  --color-line: oklch(74% 0.012 240);
-  --color-line-2: oklch(38% 0.018 240);
-  --color-muted: oklch(46% 0.014 245);
-  --color-ink-2: oklch(20% 0.018 245);
-  --color-ink: oklch(16% 0.02 245);
-  --color-accent: oklch(38% 0.135 250);
-  --color-focus: oklch(38% 0.135 250);
+  --color-paper: oklch(96.5% 0.012 85);
+  --color-paper-2: oklch(93.5% 0.014 85);
+  --color-paper-3: oklch(90% 0.016 82);
+  --color-line: oklch(82% 0.02 80);
+  --color-line-2: oklch(42% 0.03 60);
+  --color-muted: oklch(44% 0.02 65);
+  --color-ink-2: oklch(26% 0.03 55);
+  --color-ink: oklch(21% 0.03 50);
+  --color-accent: oklch(44% 0.135 32);
+  --color-focus: oklch(44% 0.135 32);
 
-  --font-display: var(--font-hanken), ui-sans-serif, sans-serif;
+  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
   --font-body: var(--font-hanken), ui-sans-serif, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
