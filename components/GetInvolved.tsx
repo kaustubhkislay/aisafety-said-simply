@@ -1,5 +1,6 @@
-import { site, involvementForms } from "@/content";
+import { site } from "@/content";
 import SignupForm from "@/components/SignupForm";
+import FormsEmbed from "@/components/FormsEmbed";
 
 export default function GetInvolved() {
   return (
@@ -14,25 +15,8 @@ export default function GetInvolved() {
             We&rsquo;re looking for writers, demo builders, and video makers
             who can make hard ideas simple.
           </p>
-          <ul className="mt-4 space-y-3">
-            {involvementForms.map((form) => (
-              <li key={form.label}>
-                <a
-                  href={form.url}
-                  target="_blank"
-                  rel="noopener"
-                  className="font-medium text-accent underline underline-offset-4"
-                >
-                  {form.label} <span aria-hidden>↗</span>
-                </a>
-                <p className="mt-1 text-sm leading-relaxed text-muted">
-                  {form.description}
-                </p>
-              </li>
-            ))}
-          </ul>
           <p className="mt-4 text-sm text-muted">
-            Neither fits?{" "}
+            Neither form below fits?{" "}
             <a
               href={`mailto:${site.contactEmail}?subject=Contributing to AI Safety Said Simply`}
               className="font-medium text-accent underline underline-offset-4"
@@ -52,6 +36,7 @@ export default function GetInvolved() {
           </div>
         </div>
       </div>
+      <FormsEmbed />
     </section>
   );
 }
