@@ -37,18 +37,106 @@ export const audiences = [
 export const theoryOfChange =
   "Lower the barrier to entry, and the ideas travel: more people who matter understand AI safety, and the conversation shifts in its favor.";
 
-export type InvolvementForm = { label: string; description: string; url: string };
+export type FormField = {
+  entryId: string;
+  label: string;
+  multiline: boolean;
+};
+
+export type InvolvementForm = {
+  label: string;
+  description: string;
+  url: string;
+  fields: FormField[];
+};
 
 export const involvementForms: InvolvementForm[] = [
   {
     label: "Communications form",
-    description: "You work in comms, media, or content and want to help make this material.",
+    description:
+      "You work in comms, media, or content. Answer as many or as few questions as you like.",
     url: "https://docs.google.com/forms/d/e/1FAIpQLSdxA6QVJSHDxvUzOoZpFVx2016d6uoefzZ5opwewv5B3OJfrA/viewform",
+    fields: [
+      {
+        entryId: "236751924",
+        label:
+          "What topics have you seen would be very impactful to explain but have not been simplified properly?",
+        multiline: true,
+      },
+      {
+        entryId: "87647740",
+        label:
+          "What kind of mediums/modalities of content are people in journalists/educators most accepting of?",
+        multiline: true,
+      },
+      {
+        entryId: "871289163",
+        label:
+          "When you are on deadline, what resource do you wish existed — a glossary, a vetted expert list, pre-cleared visuals?",
+        multiline: true,
+      },
+      {
+        entryId: "1588071546",
+        label:
+          "Would you personally use or share materials like this? What would they need to look like for you to do that?",
+        multiline: true,
+      },
+      {
+        entryId: "226460446",
+        label: "What is the best piece of simplified AI content that you’ve seen?",
+        multiline: true,
+      },
+      { entryId: "78293578", label: "Anything else?", multiline: true },
+    ],
   },
   {
     label: "Policy form",
-    description: "You work in or around policy and want to use or shape this material.",
+    description:
+      "You work in or around policy. Answer as many or as few questions as you like.",
     url: "https://docs.google.com/forms/d/e/1FAIpQLSdzstpncIEBFWv7ygL4dlQJbw5jWraRAp-gRq1K9zsU4oCR7Q/viewform",
+    fields: [
+      {
+        entryId: "373684124",
+        label:
+          "If you were to generalize the sentiment about AI in DC, what would it be like?",
+        multiline: true,
+      },
+      {
+        entryId: "1546559595",
+        label: "What topics should we be trying to simplify for people in DC?",
+        multiline: true,
+      },
+      {
+        entryId: "225813384",
+        label:
+          "What is the baseline level of AI knowledge amongst groups that are not “in the know” about AI?",
+        multiline: false,
+      },
+      {
+        entryId: "798550157",
+        label:
+          "Who are the highest leverage groups we should be targeting in DC with our content?",
+        multiline: false,
+      },
+      {
+        entryId: "1955607250",
+        label: "What is the best piece of simplified AI content that you’ve seen?",
+        multiline: true,
+      },
+      {
+        entryId: "135355408",
+        label:
+          "Would you personally use or share materials like this? What would they need to look like for you to do that?",
+        multiline: true,
+      },
+      {
+        entryId: "274666831",
+        label:
+          "Are there people we should be talking to if we want to distribute our materials more directly to policy people?",
+        multiline: false,
+      },
+      { entryId: "1439965594", label: "Anything else?", multiline: false },
+    ],
   },
 ];
 

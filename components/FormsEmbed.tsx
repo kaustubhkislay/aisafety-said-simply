@@ -1,7 +1,69 @@
 "use client";
 
 import { useState } from "react";
-import { involvementForms } from "@/content";
+import { involvementForms, type InvolvementForm } from "@/content";
+
+function toResponseUrl(viewUrl: string): string {
+  return viewUrl.replace(/\/viewform$/, "/formResponse");
+}
+
+function NativeForm({ form }: { form: InvolvementForm }) {
+  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
+
+  if (status === "done") {
+    return (
+      <p className="border-t border-line-2 pt-4 text-accent" role="status">
+        Thank you — your answers were sent.
+      </p>
+    );
+  }
+
+  return (
+    <form
+      className="space-y-6"
+      onSubmit={async (e) => {
+        e.preventDefault();
+        const body = new FormData(e.currentTarget);
+        if ([...body.values()].every((v) => v === "")) return;
+        setStatus("sending");
+        await fetch(toResponseUrl(form.url), {
+          method: "POST",
+          mode: "no-cors",
+          body,
+        });
+        setStatus("done");
+      }}
+    >
+      {form.fields.map((field) => (
+        <label key={field.entryId} className="block">
+          <span className="block leading-relaxed font-semibold text-ink">
+            {field.label}
+          </span>
+          {field.multiline ? (
+            <textarea
+              name={`entry.${field.entryId}`}
+              rows={3}
+              className="mt-2 w-full border border-line bg-paper px-3 py-2 leading-relaxed text-ink placeholder:text-muted"
+            />
+          ) : (
+            <input
+              type="text"
+              name={`entry.${field.entryId}`}
+              className="mt-2 w-full border border-line bg-paper px-3 py-2 text-ink placeholder:text-muted"
+            />
+          )}
+        </label>
+      ))}
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="bg-accent px-6 py-3 font-medium whitespace-nowrap text-paper transition-colors duration-150 ease-out hover:bg-ink-2 disabled:opacity-60"
+      >
+        {status === "sending" ? "Sending…" : "Send answers"}
+      </button>
+    </form>
+  );
+}
 
 export default function FormsEmbed() {
   const [active, setActive] = useState(involvementForms[0]);
@@ -28,30 +90,12 @@ export default function FormsEmbed() {
           );
         })}
       </div>
-      <p className="mt-3 text-sm leading-relaxed text-muted">{active.description}</p>
-      <div className="mt-4 border border-line bg-paper-2">
-        <iframe
-          key={active.url}
-          src={`${active.url}?embedded=true`}
-          title={active.label}
-          loading="lazy"
-          className="h-[900px] w-full"
-        >
-          Loading…
-        </iframe>
-      </div>
-      <p className="mt-2 text-sm text-muted">
-        Form not loading?{" "}
-        <a
-          href={active.url}
-          target="_blank"
-          rel="noopener"
-          className="font-medium text-accent underline underline-offset-4"
-        >
-          Open it in a new tab <span aria-hidden>↗</span>
-        </a>
-        .
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+        {active.description} All questions are optional.
       </p>
+      <div className="mt-6 max-w-3xl border-t border-line-2 pt-6">
+        <NativeForm key={active.label} form={active} />
+      </div>
     </div>
   );
 }
