@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { site, team, mentees } from "@/content";
@@ -26,9 +27,18 @@ export default function Team() {
         </h1>
 
         <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-8">
-          {team.map(({ name, role, bio }) => (
+          {team.map(({ name, role, bio, photo }) => (
             <div key={name} className="border-t border-line-2 pt-4">
-              <h2 className="font-display text-xl font-medium text-ink">
+              {photo && (
+                <Image
+                  src={photo}
+                  alt={name}
+                  width={480}
+                  height={480}
+                  className="aspect-square w-40 object-cover sm:w-48"
+                />
+              )}
+              <h2 className="mt-4 font-display text-xl font-medium text-ink">
                 {name}
               </h2>
               <p className="mt-1 font-mono text-xs uppercase tracking-[0.12em] text-accent">
