@@ -247,12 +247,14 @@ export const team: TeamMember[] = [
     role: "Co-founder",
     bio: "Kaustubh is the director of the Wisconsin AI Safety Initiative and the co-founder of AI Safety Said Simply. He is a generalist with a background in technical AI safety research focused on AI control and reward hacking.",
     photo: "/team/kaustubh.jpg",
+    url: "https://www.linkedin.com/in/kaustubh-kislay/",
   },
   {
     name: "Christine Corry",
     role: "Co-founder",
     photo: "/team/christine.jpg",
     bio: "Christine is a researcher with experience at UChicago's XLab Second Look, NASA Ames, and the Rubin Observatory. Her most recent research focused on single forward pass evals and emergent misalignment.",
+    url: "https://www.linkedin.com/in/christinecorry/",
   },
 ];
 
