@@ -37,6 +37,21 @@ export const audiences = [
 export const theoryOfChange =
   "Lower the barrier to entry, and the ideas travel: more people who matter understand AI safety, and the conversation shifts in its favor.";
 
+export type InvolvementForm = { label: string; description: string; url: string };
+
+export const involvementForms: InvolvementForm[] = [
+  {
+    label: "Communications form",
+    description: "You work in comms, media, or content and want to help make this material.",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdxA6QVJSHDxvUzOoZpFVx2016d6uoefzZ5opwewv5B3OJfrA/viewform",
+  },
+  {
+    label: "Policy form",
+    description: "You work in or around policy and want to use or shape this material.",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdzstpncIEBFWv7ygL4dlQJbw5jWraRAp-gRq1K9zsU4oCR7Q/viewform",
+  },
+];
+
 export type FaqItem = { q: string; a: string };
 
 export const faq: FaqItem[] = [

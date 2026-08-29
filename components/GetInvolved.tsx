@@ -1,4 +1,4 @@
-import { site } from "@/content";
+import { site, involvementForms } from "@/content";
 import SignupForm from "@/components/SignupForm";
 
 export default function GetInvolved() {
@@ -14,12 +14,33 @@ export default function GetInvolved() {
             We&rsquo;re looking for writers, demo builders, and video makers
             who can make hard ideas simple.
           </p>
-          <a
-            href={`mailto:${site.contactEmail}?subject=Contributing to AI Safety Said Simply`}
-            className="mt-4 inline-block font-medium text-accent underline underline-offset-4"
-          >
-            Email us
-          </a>
+          <ul className="mt-4 space-y-3">
+            {involvementForms.map((form) => (
+              <li key={form.label}>
+                <a
+                  href={form.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="font-medium text-accent underline underline-offset-4"
+                >
+                  {form.label} <span aria-hidden>↗</span>
+                </a>
+                <p className="mt-1 text-sm leading-relaxed text-muted">
+                  {form.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-sm text-muted">
+            Neither fits?{" "}
+            <a
+              href={`mailto:${site.contactEmail}?subject=Contributing to AI Safety Said Simply`}
+              className="font-medium text-accent underline underline-offset-4"
+            >
+              Email us
+            </a>
+            .
+          </p>
         </div>
         <div className="border-t border-line-2 pt-4">
           <h3 className="font-semibold text-ink">Stay updated</h3>
