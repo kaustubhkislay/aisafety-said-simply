@@ -239,6 +239,7 @@ export type TeamMember = {
   bio: string;
   photo?: string;
   url?: string;
+  calendly?: string;
 };
 
 export const team: TeamMember[] = [
@@ -248,6 +249,7 @@ export const team: TeamMember[] = [
     bio: "Kaustubh is the director of the Wisconsin AI Safety Initiative and the co-founder of AI Safety Said Simply. He is a generalist with a background in technical AI safety research focused on AI control and reward hacking.",
     photo: "/team/kaustubh.webp",
     url: "https://www.linkedin.com/in/kaustubh-kislay/",
+    calendly: "https://calendly.com/kaustubh-kislay/15min",
   },
   {
     name: "Christine Corry",
@@ -255,6 +257,7 @@ export const team: TeamMember[] = [
     photo: "/team/christine.webp",
     bio: "Christine is a researcher with experience at UChicago's XLab Second Look, NASA Ames, and the Rubin Observatory. Her most recent research focused on single forward pass evals and emergent misalignment.",
     url: "https://www.linkedin.com/in/christinecorry/",
+    calendly: "https://calendly.com/christinecorry",
   },
 ];
 

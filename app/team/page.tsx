@@ -27,7 +27,7 @@ export default function Team() {
         </h1>
 
         <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-8">
-          {team.map(({ name, role, bio, photo, url }) => (
+          {team.map(({ name, role, bio, photo, url, calendly }) => (
             <div key={name} className="border-t border-line-2 pt-4">
               {photo && (
                 <Image
@@ -45,16 +45,28 @@ export default function Team() {
                 {role}
               </p>
               <p className="mt-3 leading-relaxed text-muted">{bio}</p>
-              {url && (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-block font-mono text-xs uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
-                >
-                  LinkedIn ↗
-                </a>
-              )}
+              <span className="mt-3 flex flex-wrap gap-4">
+                {url && (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
+                  >
+                    LinkedIn ↗
+                  </a>
+                )}
+                {calendly && (
+                  <a
+                    href={calendly}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
+                  >
+                    Book a call ↗
+                  </a>
+                )}
+              </span>
             </div>
           ))}
         </div>
