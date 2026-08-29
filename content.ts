@@ -41,28 +41,28 @@ export type FaqItem = { q: string; a: string };
 
 export const faq: FaqItem[] = [
   {
-    q: "What is AI Safety Said Simply?",
-    a: "We make short, accurate explainers, interactive demos, and videos on the ideas that matter in AI safety. Everything is built to be finished in one sitting by someone without a technical background.",
+    q: "Isn't “said simply” just another way of saying “dumbed down”?",
+    a: "No. We cut jargon and length, not substance. Every piece aims to leave you with the real idea — the same one a researcher would recognise — minus the notation and the prerequisites.",
   },
   {
-    q: "Who is this for?",
-    a: "Policymakers who brief others, educators who need teaching material, and anyone curious about AI safety who doesn't have hours to spare. If you can read a memo, you can use our material.",
+    q: "How do you choose which topics to cover?",
+    a: "We look for topics where the stakes are high and no genuinely accessible material exists yet. If a great short explainer is already out there, we'd rather point to it than duplicate it.",
   },
   {
-    q: "Aren't there already good AI safety explainers?",
-    a: "There is excellent material out there — but most of it is long, technical, and written for people who already understand the field. The gap isn't quality. It's accessibility.",
+    q: "Can I request a topic?",
+    a: "Yes, please do. Requests from people who need the material — a briefing next month, a course next term — move topics up the queue. Email kaustubh.kislay@gmail.com with what you need and when.",
   },
   {
-    q: "What formats do you make?",
-    a: "Written explainers, interactive demos you can play with in the browser, and short videos. One topic can ship in several formats, so you can pick the one that fits how you learn or teach.",
+    q: "Do you take positions on AI policy?",
+    a: "We explain ideas; we don't lobby. Where experts disagree, we say so and present the disagreement rather than picking a side for you.",
   },
   {
     q: "When do the in-production topics ship?",
     a: "We don't promise dates. Each topic goes live when it's accurate and genuinely easy to finish. Sign up for updates below and we'll tell you the moment each one ships.",
   },
   {
-    q: "How can I help?",
-    a: "Tell us which topic you need, share the library with someone who'd use it, or pitch in on writing and demos. See the Get involved section, or email kaustubh.kislay@gmail.com.",
+    q: "I spotted an error. What should I do?",
+    a: "Tell us — accuracy is the whole point. Email kaustubh.kislay@gmail.com with the piece and the problem, and we'll fix it and note the correction.",
   },
 ];
 
