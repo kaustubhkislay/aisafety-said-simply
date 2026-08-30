@@ -62,14 +62,14 @@ export default function Team() {
 
         <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-8">
           {team.map(({ name, role, bio, photo, url, calendly, email }) => (
-            <div key={name} className="flex flex-col gap-6 sm:flex-row sm:gap-6">
+            <div key={name} className="flex flex-col gap-5">
               {photo && (
                 <Image
                   src={photo}
                   alt={name}
                   width={480}
                   height={480}
-                  className="aspect-square w-40 shrink-0 rounded-card object-cover sm:w-36"
+                  className="aspect-square w-40 rounded-card object-cover sm:w-44"
                 />
               )}
               <div className="min-w-0">
