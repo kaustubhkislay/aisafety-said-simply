@@ -1,11 +1,24 @@
 export type Format = "Explainer" | "Demo" | "Video";
 
+export type Audience = "Policymakers" | "Educators" | "Public";
+
 export type LibraryItem = {
   title: string;
   hook: string;
   formats: Format[];
+  audiences: Audience[];
   status: "live" | "in-production";
+  /** Set when the piece is hosted on this domain (renders at /library/[slug]). */
+  slug?: string;
+  /** External pieces (e.g. rewardhacking.org). An item never has both slug and url. */
   url?: string;
+  /** Question-phrased search aliases, e.g. "can AI pretend to be safe?" */
+  aliases?: string[];
+  readingMinutes?: number;
+  /** ISO date of last substantive update, e.g. "2026-08-29". */
+  updated?: string;
+  /** Path under /public to a downloadable one-pager, e.g. "/onepagers/ai-control.pdf". */
+  pdf?: string;
 };
 
 export const site = {
@@ -174,6 +187,8 @@ export const library: LibraryItem[] = [
     title: "Reward hacking, in the wild",
     hook: "Real, documented cases of AI systems gaming their objectives — searchable and severity-rated.",
     formats: ["Explainer", "Demo"],
+    audiences: ["Policymakers", "Educators", "Public"],
+    aliases: ["what is reward hacking?", "examples of AI gaming its objectives"],
     status: "live",
     url: "https://rewardhacking.org",
   },
@@ -181,54 +196,72 @@ export const library: LibraryItem[] = [
     title: "Sleeper agents & secret loyalties",
     hook: "How a model can behave perfectly in testing while carrying hidden goals for later.",
     formats: ["Explainer"],
+    audiences: ["Policymakers", "Public"],
+    aliases: ["can AI pretend to be safe?", "what is a sleeper agent?"],
     status: "in-production",
   },
   {
     title: "AI control",
     hook: "Getting useful work out of AI systems we don't fully trust — and catching them if they defect.",
     formats: ["Explainer", "Demo"],
+    audiences: ["Policymakers", "Educators"],
+    aliases: ["how do we use AI we don't trust?"],
     status: "in-production",
   },
   {
     title: "Eval awareness & eval gaming",
     hook: "What happens when a model can tell it's being tested — and acts accordingly.",
     formats: ["Explainer"],
+    audiences: ["Educators", "Policymakers"],
+    aliases: ["can AI tell when it's being tested?"],
     status: "in-production",
   },
   {
     title: "Chain-of-thought unfaithfulness",
     hook: "A model's written reasoning doesn't always reflect why it actually did what it did.",
     formats: ["Explainer", "Video"],
+    audiences: ["Educators", "Public"],
+    aliases: ["does AI reasoning reflect what it actually does?"],
     status: "in-production",
   },
   {
     title: "Bio & cyber uplift",
     hook: "How much easier do frontier models make it to cause serious harm — and how we measure that.",
     formats: ["Explainer"],
+    audiences: ["Policymakers"],
+    aliases: ["how much does AI help attackers?"],
     status: "in-production",
   },
   {
     title: "Compute verification",
     hook: "How treaties on AI could actually be enforced: verifying what chips are doing, and where.",
     formats: ["Explainer"],
+    audiences: ["Policymakers"],
+    aliases: ["how would an AI treaty be enforced?"],
     status: "in-production",
   },
   {
     title: "Safeguards & classifiers",
     hook: "The filters wrapped around AI models — what they catch, what they miss, and why it's hard.",
     formats: ["Explainer", "Demo"],
+    audiences: ["Educators", "Public"],
+    aliases: ["how do AI content filters work?"],
     status: "in-production",
   },
   {
     title: "Self-fulfilling misalignment",
     hook: "Could writing about treacherous AI teach future models to be treacherous?",
     formats: ["Explainer"],
+    audiences: ["Public", "Educators"],
+    aliases: ["can writing about bad AI cause bad AI?"],
     status: "in-production",
   },
   {
     title: "Value reflection",
     hook: "If an AI could revise its own values, where would they settle — and would we like the result?",
     formats: ["Explainer"],
+    audiences: ["Public"],
+    aliases: ["what would AI values become?"],
     status: "in-production",
   },
 ];

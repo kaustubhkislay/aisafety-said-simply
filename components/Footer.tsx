@@ -33,6 +33,14 @@ export default function Footer() {
             >
               {site.contactEmail}
             </a>
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cream opacity-70 hover:underline"
+            >
+              Content is free to share — CC BY 4.0
+            </a>
           </div>
         </div>
       </div>
