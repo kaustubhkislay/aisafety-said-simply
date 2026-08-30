@@ -39,9 +39,9 @@ export default function Team() {
                 {email && (
                   <a
                     href={`mailto:${email}`}
-                    className="font-mono text-xs uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
+                    className="font-mono text-xs tracking-[0.02em] text-muted underline underline-offset-4 hover:text-ink"
                   >
-                    Email ↗
+                    {email}
                   </a>
                 )}
                 {url && (
