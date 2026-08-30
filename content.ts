@@ -280,7 +280,7 @@ export const team: TeamMember[] = [
   {
     name: "Kaustubh Kislay",
     role: "Co-founder",
-    bio: "Kaustubh is the director of the Wisconsin AI Safety Initiative and the co-founder of AI Safety Said Simply. He is a generalist with a background in technical AI safety research focused on AI control and reward hacking.",
+    bio: "Kaustubh is the director of the Wisconsin AI Safety Initiative. He is a generalist with a background in technical AI safety research focused on AI control and reward hacking.",
     photo: "/team/kaustubh.webp",
     url: "https://www.linkedin.com/in/kaustubh-kislay/",
     calendly: "https://calendly.com/kaustubh-kislay/15min",
