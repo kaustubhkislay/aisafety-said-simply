@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 import { site, team, mentees } from "@/content";
 
@@ -12,15 +11,6 @@ export const metadata: Metadata = {
 export default function Team() {
   return (
     <main className="flex min-h-full flex-col">
-      <div className="mx-auto w-full max-w-5xl px-6 pt-10">
-        <Link
-          href="/"
-          className="font-mono text-xs uppercase tracking-[0.12em] text-muted hover:text-ink"
-        >
-          ← {site.name}
-        </Link>
-      </div>
-
       <section className="mx-auto w-full max-w-5xl px-6 pt-14 pb-16 sm:pb-20">
         <h1 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink sm:text-4xl">
           Team
