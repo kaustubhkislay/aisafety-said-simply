@@ -240,6 +240,7 @@ export type TeamMember = {
   photo?: string;
   url?: string;
   calendly?: string;
+  email?: string;
 };
 
 export const team: TeamMember[] = [
@@ -250,6 +251,7 @@ export const team: TeamMember[] = [
     photo: "/team/kaustubh.webp",
     url: "https://www.linkedin.com/in/kaustubh-kislay/",
     calendly: "https://calendly.com/kaustubh-kislay/15min",
+    email: "kaustubh@aisafetysaidsimply.com",
   },
   {
     name: "Christine Corry",
@@ -258,6 +260,7 @@ export const team: TeamMember[] = [
     bio: "Christine is a researcher with experience at UChicago's XLab Second Look, NASA Ames, and the Rubin Observatory. Her most recent research focused on single forward pass evals and emergent misalignment.",
     url: "https://www.linkedin.com/in/christinecorry/",
     calendly: "https://calendly.com/christinecorry",
+    email: "christine@aisafetysaidsimply.com",
   },
 ];
 
