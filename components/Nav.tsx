@@ -10,7 +10,7 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className="sticky top-0 z-10 border-b border-line bg-paper">
+    <nav className="sticky top-0 z-10 bg-paper">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-3">
         <Link
           href="/"

@@ -104,7 +104,7 @@ export default async function TopicPage({
             </a>
           )}
         </header>
-        <div className="mt-6 max-w-prose border-t border-line pt-2">
+        <div className="mt-6 max-w-prose pt-2">
           <Body />
         </div>
       </article>

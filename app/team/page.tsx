@@ -18,7 +18,7 @@ export default function Team() {
 
         <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-8">
           {team.map(({ name, role, bio, photo, url, calendly, email }) => (
-            <div key={name} className="border-t border-line-2 pt-4">
+            <div key={name} className="pt-4">
               {photo && (
                 <Image
                   src={photo}
@@ -74,7 +74,7 @@ export default function Team() {
         </h2>
         <div className="mt-8 grid gap-8 sm:grid-cols-3 sm:gap-6">
           {mentees.map(({ name, bio }) => (
-            <div key={name} className="border-t border-line pt-4">
+            <div key={name} className="pt-4">
               <h3 className="font-semibold text-ink">{name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{bio}</p>
             </div>

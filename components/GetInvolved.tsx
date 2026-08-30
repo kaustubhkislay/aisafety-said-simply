@@ -9,7 +9,7 @@ export default function GetInvolved() {
         Get involved
       </h2>
       <div className="mt-10 grid gap-10 sm:grid-cols-2">
-        <div className="border-t border-line-2 pt-4">
+        <div className="pt-4">
           <h3 className="font-semibold text-ink">Contribute</h3>
           <p className="mt-2 leading-relaxed text-muted">
             We&rsquo;re looking for writers, demo builders, and video makers
@@ -26,7 +26,7 @@ export default function GetInvolved() {
             .
           </p>
         </div>
-        <div className="border-t border-line-2 pt-4">
+        <div className="pt-4">
           <h3 className="font-semibold text-ink">Stay updated</h3>
           <p className="mt-2 leading-relaxed text-muted">
             Get new explainers, demos, and videos as they&rsquo;re published.

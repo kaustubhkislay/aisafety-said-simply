@@ -12,7 +12,7 @@ function NativeForm({ form }: { form: InvolvementForm }) {
 
   if (status === "done") {
     return (
-      <p className="border-t border-line-2 pt-4 text-accent" role="status">
+      <p className="pt-4 text-accent" role="status">
         Thank you — your answers were sent.
       </p>
     );
@@ -93,7 +93,7 @@ export default function FormsEmbed() {
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
         {active.description} All questions are optional.
       </p>
-      <div className="mt-6 max-w-3xl border-t border-line-2 pt-6">
+      <div className="mt-6 max-w-3xl pt-6">
         <NativeForm key={active.label} form={active} />
       </div>
     </div>
