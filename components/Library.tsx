@@ -17,7 +17,7 @@ export default function Library() {
               <>
                 <div className="flex items-baseline justify-between gap-2">
                   <span
-                    className={`font-mono text-xs uppercase tracking-[0.12em] ${
+                    className={`text-xs font-semibold uppercase tracking-[0.08em] ${
                       item.status === "live" ? "text-accent" : "text-muted"
                     }`}
                   >
@@ -43,12 +43,12 @@ export default function Library() {
                 href={item.url}
                 target="_blank"
                 rel="noopener"
-                className="block border border-accent bg-paper-2 p-6 transition-colors duration-150 ease-out hover:bg-paper-3"
+                className="block rounded-card border border-accent bg-card p-6 transition-colors duration-150 ease-out hover:bg-paper-2"
               >
                 {inner}
               </a>
             ) : (
-              <div key={item.title} className="border border-line p-6">
+              <div key={item.title} className="rounded-card border border-line bg-card p-6">
                 {inner}
               </div>
             );

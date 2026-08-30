@@ -25,13 +25,13 @@ export default function Team() {
                   alt={name}
                   width={480}
                   height={480}
-                  className="aspect-square w-40 object-cover sm:w-48"
+                  className="aspect-square w-40 rounded-card object-cover sm:w-48"
                 />
               )}
               <h2 className="mt-4 font-display text-xl font-medium text-ink">
                 {name}
               </h2>
-              <p className="mt-1 font-mono text-xs uppercase tracking-[0.12em] text-accent">
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-accent">
                 {role}
               </p>
               <p className="mt-3 leading-relaxed text-muted">{bio}</p>
@@ -39,7 +39,7 @@ export default function Team() {
                 {email && (
                   <a
                     href={`mailto:${email}`}
-                    className="font-mono text-xs tracking-[0.02em] text-muted underline underline-offset-4 hover:text-ink"
+                    className="text-sm font-medium text-accent underline underline-offset-4 hover:text-ink"
                   >
                     {email}
                   </a>
@@ -49,7 +49,7 @@ export default function Team() {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-xs uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
+                    className="text-sm font-medium text-accent underline underline-offset-4 hover:text-ink"
                   >
                     LinkedIn ↗
                   </a>
@@ -59,7 +59,7 @@ export default function Team() {
                     href={calendly}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-xs uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
+                    className="text-sm font-medium text-accent underline underline-offset-4 hover:text-ink"
                   >
                     Book a call ↗
                   </a>

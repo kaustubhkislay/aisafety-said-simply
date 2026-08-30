@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Newsreader, IBM_Plex_Mono } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const hanken = Hanken_Grotesk({
-  variable: "--font-hanken",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -12,12 +12,6 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
   style: ["normal", "italic"],
-});
-
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -45,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${hanken.variable} ${newsreader.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${newsreader.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Nav />

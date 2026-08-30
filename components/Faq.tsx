@@ -14,13 +14,13 @@ export default function Faq() {
                 {q}
                 <span
                   aria-hidden
-                  className="font-mono text-xs text-muted group-open:hidden"
+                  className="text-sm text-muted group-open:hidden"
                 >
                   +
                 </span>
                 <span
                   aria-hidden
-                  className="hidden font-mono text-xs text-muted group-open:inline"
+                  className="hidden text-sm text-muted group-open:inline"
                 >
                   &minus;
                 </span>

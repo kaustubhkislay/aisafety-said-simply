@@ -1,23 +1,28 @@
-/* Hallmark · genre: editorial · macrostructure: Journal Front (masthead + library-first) · theme: custom warm-journal · enrichment: none · nav: none (single page) · footer: Ft2 inline
- * pre-emit critique: P4 H5 E4 S4 R5 V4 · differs from Almanac on: paper band (cool→warm), display style (sans→roman-serif), accent hue (cool-blue→warm-brick) */
+/* Design ported from waisi.org (see its DESIGN_SYSTEM.md): editorial "ink on
+ * paper" — warm off-white page, white cards with hairline borders and 4px
+ * radius, Newsreader serif headings, Inter body, violet reserved for links
+ * and CTAs. No shadows. */
 @import "tailwindcss";
 
 @theme {
-  --color-paper: oklch(96.5% 0.012 85);
-  --color-paper-2: oklch(93.5% 0.014 85);
-  --color-paper-3: oklch(90% 0.016 82);
-  --color-line: oklch(82% 0.02 80);
-  --color-line-2: oklch(42% 0.03 60);
-  --color-muted: oklch(44% 0.02 65);
-  --color-ink-2: oklch(26% 0.03 55);
-  --color-ink: oklch(21% 0.03 50);
-  --color-accent: oklch(44% 0.135 32);
-  --color-focus: oklch(44% 0.135 32);
+  --color-paper: #faf9f7;
+  --color-paper-2: #f3f1ec;
+  --color-paper-3: #edeae3;
+  --color-card: #ffffff;
+  --color-line: #e4e1da;
+  --color-line-2: #c9c4b8;
+  --color-muted: #5b5852;
+  --color-ink-2: #26241f;
+  --color-ink: #1c1b1a;
+  --color-cream: #faf9f7;
+  --color-accent: #6d28d9;
+  --color-focus: #6d28d9;
 
   --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
-  --font-body: var(--font-hanken), ui-sans-serif, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --radius-card: 4px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 

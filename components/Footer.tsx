@@ -3,22 +3,38 @@ import { site } from "@/content";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-line">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-baseline justify-between gap-4 px-6 py-8 text-sm text-muted">
-        <span className="font-mono text-xs uppercase tracking-[0.12em]">
-          {site.name}
-        </span>
-        <span className="flex flex-wrap items-baseline gap-4">
-          <Link href="/team" className="underline underline-offset-4 hover:text-ink">
-            Team
-          </Link>
-          <a
-            href={`mailto:${site.contactEmail}`}
-            className="underline underline-offset-4 hover:text-ink"
-          >
-            {site.contactEmail}
-          </a>
-        </span>
+    <footer className="mt-auto bg-ink">
+      <div className="mx-auto max-w-5xl px-6 py-10">
+        <div className="flex flex-wrap items-start justify-between gap-8">
+          <div>
+            <p className="font-serif text-lg font-medium text-cream">
+              {site.name}
+            </p>
+            <p className="mt-2 max-w-sm text-sm leading-relaxed text-cream opacity-70">
+              {site.tagline}
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 text-sm">
+            <Link
+              href="/team"
+              className="text-cream opacity-90 hover:underline"
+            >
+              Team
+            </Link>
+            <Link
+              href="/#library"
+              className="text-cream opacity-90 hover:underline"
+            >
+              Library
+            </Link>
+            <a
+              href={`mailto:${site.contactEmail}`}
+              className="text-cream opacity-90 hover:underline"
+            >
+              {site.contactEmail}
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );

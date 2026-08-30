@@ -43,13 +43,13 @@ function NativeForm({ form }: { form: InvolvementForm }) {
             <textarea
               name={`entry.${field.entryId}`}
               rows={3}
-              className="mt-2 w-full border border-line bg-paper px-3 py-2 leading-relaxed text-ink placeholder:text-muted"
+              className="mt-2 w-full rounded-card border border-line bg-card px-3 py-2 leading-relaxed text-ink placeholder:text-muted"
             />
           ) : (
             <input
               type="text"
               name={`entry.${field.entryId}`}
-              className="mt-2 w-full border border-line bg-paper px-3 py-2 text-ink placeholder:text-muted"
+              className="mt-2 w-full rounded-card border border-line bg-card px-3 py-2 text-ink placeholder:text-muted"
             />
           )}
         </label>
@@ -57,7 +57,7 @@ function NativeForm({ form }: { form: InvolvementForm }) {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="bg-accent px-6 py-3 font-medium whitespace-nowrap text-paper transition-colors duration-150 ease-out hover:bg-ink-2 disabled:opacity-60"
+        className="rounded-card bg-accent px-6 py-3 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90 disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send answers"}
       </button>

@@ -32,11 +32,11 @@ export default function SignupForm() {
         required
         placeholder="you@example.com"
         aria-label="Email address"
-        className="w-full min-w-0 border border-line bg-paper px-3 py-2 text-ink placeholder:text-muted"
+        className="w-full min-w-0 rounded-card border border-line bg-card px-3 py-2 text-ink placeholder:text-muted"
       />
       <button
         type="submit"
-        className="bg-accent px-4 py-2 font-medium whitespace-nowrap text-paper transition-colors duration-150 ease-out hover:bg-ink-2"
+        className="rounded-card bg-accent px-4 py-2 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
       >
         Sign up
       </button>
