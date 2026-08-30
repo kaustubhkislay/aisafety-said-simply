@@ -102,15 +102,7 @@ export default function LibraryBrowser({ items }: { items: LibraryItem[] }) {
 
   return (
     <div className="mt-8">
-      <input
-        type="search"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search topics — try “sleeper agent” or a question"
-        aria-label="Search the library"
-        className="w-full max-w-md rounded-card border border-line bg-card px-3 py-2 text-ink placeholder:text-muted"
-      />
-      <div className="mt-4 flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         {FORMATS.map((f) => (
           <button
             key={f}
