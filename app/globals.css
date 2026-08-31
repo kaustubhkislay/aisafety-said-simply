@@ -51,3 +51,25 @@ h3 {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
+
+/* Hero yarn background: one-time draw-in of the tangle-to-strand path. */
+.yarn-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: yarnDraw 2.8s var(--ease-out) forwards;
+}
+
+@keyframes yarnDraw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yarn-path {
+    animation: none;
+  }
+}

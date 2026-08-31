@@ -1,12 +1,14 @@
 import { site } from "@/content";
 import { team } from "@/content";
+import YarnBackground from "@/components/YarnBackground";
 
 export default function Hero() {
   const calendly = team[0]?.calendly;
 
   return (
-    <header className="mx-auto w-full max-w-5xl px-6">
-      <div className="flex flex-col gap-10 pt-16 pb-16 sm:flex-row sm:items-center sm:justify-between sm:gap-12 sm:pt-24 sm:pb-20">
+    <header className="relative mx-auto w-full max-w-5xl px-6">
+      <YarnBackground />
+      <div className="relative flex flex-col gap-10 pt-16 pb-16 sm:flex-row sm:items-center sm:justify-between sm:gap-12 sm:pt-24 sm:pb-20">
         <h1 className="max-w-2xl font-display text-4xl font-medium leading-[1.08] tracking-[-0.01em] text-ink sm:text-6xl">
           {site.tagline}
         </h1>
