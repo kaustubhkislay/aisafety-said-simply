@@ -52,24 +52,55 @@ h3 {
   outline-offset: 2px;
 }
 
-/* Hero yarn background: one-time draw-in of the tangle-to-strand path. */
+/* Hero yarn background, scrubbed by page scroll: each ply is a single path
+ * with pathLength=1. Sliding the dash window (offset 0 → -0.9) erases the
+ * tangle from its start as the page scrolls, so the knot visibly unwinds
+ * while the straight strand remains. The whole svg also drifts down slightly.
+ * Browsers without animation-timeline (and reduced-motion users) get the
+ * static full tangle. */
 .yarn-path {
-  stroke-dasharray: 1;
+  stroke-dasharray: 1 1;
   stroke-dashoffset: 0;
-  animation: yarnDraw 2.8s var(--ease-out) forwards;
 }
 
-@keyframes yarnDraw {
+.yarn-drift {
+  will-change: transform;
+}
+
+@supports (animation-timeline: scroll()) {
+  .yarn-path {
+    animation: yarnUnravel linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 150vh;
+  }
+  .yarn-drift {
+    animation: yarnDrift linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 150vh;
+  }
+}
+
+@keyframes yarnUnravel {
   from {
-    stroke-dashoffset: 1;
+    stroke-dashoffset: 0;
   }
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: -0.9;
+  }
+}
+
+@keyframes yarnDrift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(9rem);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .yarn-path {
+  .yarn-path,
+  .yarn-drift {
     animation: none;
   }
 }
