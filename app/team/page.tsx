@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import CopyEmailButton from "@/components/CopyEmailButton";
 import Footer from "@/components/Footer";
 import { site, team, mentees } from "@/content";
 
@@ -7,24 +8,6 @@ export const metadata: Metadata = {
   title: "Team — AI Safety Said Simply",
   description: `The people behind ${site.name}.`,
 };
-
-function MailIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-    >
-      <rect x="2.5" y="5" width="19" height="14" rx="2" />
-      <path d="m3 6.5 9 6.5 9-6.5" />
-    </svg>
-  );
-}
 
 function LinkedInIcon() {
   return (
@@ -82,14 +65,7 @@ export default function Team() {
                   </p>
                   <span className="flex items-center gap-2">
                     {email && (
-                      <a
-                        href={`mailto:${email}`}
-                        aria-label={`Email ${name}`}
-                        title={email}
-                        className="text-muted transition-colors duration-150 ease-out hover:text-accent"
-                      >
-                        <MailIcon />
-                      </a>
+                      <CopyEmailButton email={email} name={name} />
                     )}
                     {url && (
                       <a

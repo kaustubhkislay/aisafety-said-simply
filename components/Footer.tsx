@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { site } from "@/content";
 
 export default function Footer() {
@@ -7,8 +8,8 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-6 py-10">
         <div className="flex flex-wrap items-start justify-between gap-8">
           <div>
-            <p className="font-serif text-lg font-medium text-cream">
-              {site.name}
+            <p className="text-cream">
+              <BrandLogo light />
             </p>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-cream opacity-70">
               {site.tagline}
@@ -26,6 +27,9 @@ export default function Footer() {
               className="text-cream opacity-90 hover:underline"
             >
               Library
+            </Link>
+            <Link href="/contact" className="text-cream opacity-90 hover:underline">
+              Contact
             </Link>
             <a
               href={`mailto:${site.contactEmail}`}

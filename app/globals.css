@@ -1,28 +1,29 @@
-/* Design ported from waisi.org (see its DESIGN_SYSTEM.md): editorial "ink on
- * paper" — warm off-white page, white cards with hairline borders and 4px
- * radius, Newsreader serif headings, Inter body, violet reserved for links
- * and CTAs. No shadows. */
+/* Industrial monochrome: Helvetica, square edges, and open space. */
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #faf9f7;
-  --color-paper-2: #f3f1ec;
-  --color-paper-3: #edeae3;
+  --color-paper: #ffffff;
+  --color-paper-2: #f5f5f5;
+  --color-paper-3: #ebebeb;
   --color-card: #ffffff;
-  --color-line: #e4e1da;
-  --color-line-2: #c9c4b8;
-  --color-muted: #5b5852;
-  --color-ink-2: #26241f;
-  --color-ink: #1c1b1a;
-  --color-cream: #faf9f7;
-  --color-accent: #6d28d9;
-  --color-focus: #6d28d9;
+  --color-line: #d4d4d4;
+  --color-line-2: #858585;
+  --color-muted: #595959;
+  --color-ink-2: #262626;
+  --color-ink: #111111;
+  --color-cream: #ffffff;
+  --color-accent: #111111;
+  --color-focus: #111111;
+  --color-hero-orange: #c64d0a;
+  --color-library-live: #ff8a3d;
+  --color-library-live-hover: #f57828;
 
-  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
-  --font-body: var(--font-inter), ui-sans-serif, sans-serif;
-  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-display: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-body: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Helvetica, "Helvetica Neue", Arial, sans-serif;
 
-  --radius-card: 4px;
+  --radius-card: 0px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -52,55 +53,41 @@ h3 {
   outline-offset: 2px;
 }
 
-/* Hero yarn background, scrubbed by page scroll: each ply is a single path
- * with pathLength=1. Sliding the dash window (offset 0 → -0.9) erases the
- * tangle from its start as the page scrolls, so the knot visibly unwinds
- * while the straight strand remains. The whole svg also drifts down slightly.
- * Browsers without animation-timeline (and reduced-motion users) get the
- * static full tangle. */
-.yarn-path {
-  stroke-dasharray: 1 1;
-  stroke-dashoffset: 0;
+section[id] { scroll-margin-top: 7rem; }
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.brand-lockup img { flex: none; }
+.brand-wordmark {
+  font-family: var(--font-body);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.055em;
 }
 
-.yarn-drift {
-  will-change: transform;
+/* Section labels organize the content without divider rules. */
+.section-index {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: .6875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
+::selection { background: var(--color-ink); color: var(--color-paper); }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:not(:disabled) { cursor: pointer; }
 
-@supports (animation-timeline: scroll()) {
-  .yarn-path {
-    animation: yarnUnravel linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 150vh;
-  }
-  .yarn-drift {
-    animation: yarnDrift linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 150vh;
-  }
+.hero-shell {
+  min-height: calc(100svh - 76px);
 }
-
-@keyframes yarnUnravel {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -0.9;
-  }
-}
-
-@keyframes yarnDrift {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(9rem);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .yarn-path,
-  .yarn-drift {
-    animation: none;
-  }
+@media (max-width: 639px) {
+  .hero-shell { min-height: calc(100svh - 152px); }
 }

@@ -2,22 +2,24 @@ import { audiences, theoryOfChange } from "@/content";
 
 export default function Why() {
   return (
-    <section className="">
-      <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-        <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
+    <section aria-labelledby="why-heading" className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
+      <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
+        <h2 id="why-heading" className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
           Why this exists
         </h2>
-        <div className="mt-10 grid gap-10 sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-8">
-          {audiences.map(({ audience, problem }) => (
-            <div key={audience} className="pt-4">
-              <h3 className="font-semibold text-accent">{audience}</h3>
-              <p className="mt-2 leading-relaxed text-muted">{problem}</p>
-            </div>
-          ))}
+        <div className="min-w-0">
+          <p className="text-2xl leading-snug tracking-tight text-ink-2 sm:text-3xl">
+            {theoryOfChange}
+          </p>
+          <div className="mt-8 space-y-6 sm:mt-10">
+            {audiences.map(({ audience, problem }) => (
+              <div key={audience} className="grid gap-2 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-5">
+                <h3 className="font-semibold text-ink">{audience}</h3>
+                <p className="leading-relaxed text-muted">{problem}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <p className="mt-14 max-w-3xl font-serif text-2xl italic leading-snug text-ink-2">
-          {theoryOfChange}
-        </p>
       </div>
     </section>
   );

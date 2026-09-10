@@ -1,45 +1,31 @@
-"use client";
+import { site } from "@/content";
 
-import { useState } from "react";
-import { subscribe } from "@/lib/subscribe";
-
+// Enable subscriptions once a mailing-list service replaces lib/subscribe.ts.
 export default function SignupForm() {
-  const [done, setDone] = useState(false);
-
-  if (done) {
-    return (
-      <p className="text-accent" role="status">
-        You&rsquo;re on the list. We&rsquo;ll be in touch.
-      </p>
-    );
-  }
-
   return (
-    <form
-      className="flex max-w-md gap-2"
-      onSubmit={async (e) => {
-        e.preventDefault();
-        const email = new FormData(e.currentTarget).get("email");
-        if (typeof email === "string" && email) {
-          await subscribe(email);
-          setDone(true);
-        }
-      }}
-    >
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="you@example.com"
-        aria-label="Email address"
-        className="w-full min-w-0 rounded-card border border-line bg-card px-3 py-2 text-ink placeholder:text-muted"
-      />
-      <button
-        type="submit"
-        className="rounded-card bg-accent px-4 py-2 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
-      >
-        Sign up
-      </button>
-    </form>
+    <div className="max-w-md">
+      <form aria-label="Mailing list signup">
+        <fieldset disabled className="flex gap-2">
+          <legend className="sr-only">Mailing list signup — coming soon</legend>
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            aria-label="Email address"
+            className="w-full min-w-0 rounded-card border border-line bg-paper-2 px-3 py-2 text-muted"
+          />
+          <button
+            type="submit"
+            className="shrink-0 rounded-card bg-ink px-4 py-2 font-medium whitespace-nowrap text-cream disabled:opacity-50"
+          >
+            Sign up
+          </button>
+        </fieldset>
+      </form>
+      <p className="mt-3 text-sm leading-relaxed text-muted">
+        Mailing list signups are coming soon. For now,{" "}
+        <a href={`mailto:${site.contactEmail}`} className="text-ink underline underline-offset-4">email us</a>.
+      </p>
+    </div>
   );
 }

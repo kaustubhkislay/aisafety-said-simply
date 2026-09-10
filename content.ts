@@ -23,7 +23,7 @@ export type LibraryItem = {
 
 export const site = {
   name: "AI Safety Said Simply",
-  tagline: "Complex AI safety topics, explained in forms people actually finish.",
+  tagline: "Complex AI safety topics, said simply.",
   description:
     "Short explainers, interactive demos, and videos on the ideas that matter in AI safety — built for policymakers, journalists, educators, and anyone without hours to spare.",
   contactEmail: "contact@aisafetysaidsimply.com",
@@ -184,7 +184,7 @@ export const faq: FaqItem[] = [
 
 export const library: LibraryItem[] = [
   {
-    title: "Reward hacking, in the wild",
+    title: "Reward hacking",
     hook: "Real, documented cases of AI systems gaming their objectives — searchable and severity-rated.",
     formats: ["Explainer", "Demo"],
     audiences: ["Policymakers", "Educators", "Public"],

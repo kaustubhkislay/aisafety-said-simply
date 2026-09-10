@@ -1,101 +1,77 @@
 "use client";
 
 import { useState } from "react";
-import { involvementForms, type InvolvementForm } from "@/content";
-
-function toResponseUrl(viewUrl: string): string {
-  return viewUrl.replace(/\/viewform$/, "/formResponse");
-}
-
-function NativeForm({ form }: { form: InvolvementForm }) {
-  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
-
-  if (status === "done") {
-    return (
-      <p className="pt-4 text-accent" role="status">
-        Thank you — your answers were sent.
-      </p>
-    );
-  }
-
-  return (
-    <form
-      className="space-y-6"
-      onSubmit={async (e) => {
-        e.preventDefault();
-        const body = new FormData(e.currentTarget);
-        if ([...body.values()].every((v) => v === "")) return;
-        setStatus("sending");
-        await fetch(toResponseUrl(form.url), {
-          method: "POST",
-          mode: "no-cors",
-          body,
-        });
-        setStatus("done");
-      }}
-    >
-      {form.fields.map((field) => (
-        <label key={field.entryId} className="block">
-          <span className="block leading-relaxed font-semibold text-ink">
-            {field.label}
-          </span>
-          {field.multiline ? (
-            <textarea
-              name={`entry.${field.entryId}`}
-              rows={3}
-              className="mt-2 w-full rounded-card border border-line bg-card px-3 py-2 leading-relaxed text-ink placeholder:text-muted"
-            />
-          ) : (
-            <input
-              type="text"
-              name={`entry.${field.entryId}`}
-              className="mt-2 w-full rounded-card border border-line bg-card px-3 py-2 text-ink placeholder:text-muted"
-            />
-          )}
-        </label>
-      ))}
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="rounded-card bg-accent px-6 py-3 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90 disabled:opacity-60"
-      >
-        {status === "sending" ? "Sending…" : "Send answers"}
-      </button>
-    </form>
-  );
-}
 
 export default function FormsEmbed() {
-  const [active, setActive] = useState(involvementForms[0]);
+  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
+  const [error, setError] = useState("");
+  const fieldClass = "mt-2 block w-full rounded-card border border-line bg-card px-3 py-3 font-normal text-ink";
 
   return (
-    <div className="mt-12">
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Involvement forms">
-        {involvementForms.map((form) => {
-          const selected = form.label === active.label;
-          return (
-            <button
-              key={form.label}
-              role="tab"
-              aria-selected={selected}
-              onClick={() => setActive(form)}
-              className={`px-4 py-2 font-medium transition-colors duration-150 ease-out ${
-                selected
-                  ? "bg-accent text-paper"
-                  : "border border-line-2 text-ink hover:bg-paper-2"
-              }`}
-            >
-              {form.label}
-            </button>
-          );
-        })}
-      </div>
-      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-        {active.description} All questions are optional.
+    <div className="max-w-3xl">
+      <h2 className="text-3xl font-medium tracking-tight">Join our team</h2>
+      <p className="mt-3 mb-8 max-w-2xl leading-relaxed text-muted">
+        Tell us a little about yourself and how you would like to contribute.
       </p>
-      <div className="mt-6 max-w-3xl pt-6">
-        <NativeForm key={active.label} form={active} />
-      </div>
+      {status === "done" ? (
+        <p role="status">Thank you. We have received your expression of interest.</p>
+      ) : (
+        <form
+          aria-label="Team expression of interest"
+          aria-busy={status === "sending"}
+          className="space-y-6"
+          onSubmit={async (event) => {
+            event.preventDefault();
+            if (status === "sending") return;
+            const data = new FormData(event.currentTarget);
+            setError("");
+            setStatus("sending");
+            try {
+              const result = await fetch("/api/team-interest", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(Object.fromEntries(data)),
+              });
+              const response = await result.json();
+              if (!result.ok || !response.ok) throw new Error(response.error || "We could not confirm receipt. Please try again later.");
+              setStatus("done");
+            } catch (problem) {
+              setError(problem instanceof Error ? problem.message : "We could not confirm receipt. Please try again later.");
+              setStatus("idle");
+            }
+          }}
+        >
+          <fieldset disabled={status === "sending"} className="space-y-6">
+            <legend className="sr-only">Your expression of interest</legend>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <label className="block text-sm font-medium">
+                Name
+                <input name="name" required maxLength={100} autoComplete="name" className={fieldClass} />
+              </label>
+              <label className="block text-sm font-medium">
+                Email
+                <input name="email" required type="email" maxLength={254} autoComplete="email" className={fieldClass} />
+              </label>
+            </div>
+            <label className="block text-sm font-medium">
+              Tell us about yourself and how you would like to contribute
+              <textarea name="interest" required maxLength={4000} rows={5} className={`${fieldClass} resize-y`} />
+            </label>
+            <label className="block text-sm font-medium">
+              Relevant links <span className="font-normal text-muted">(optional)</span>
+              <input name="links" maxLength={1000} placeholder="Portfolio, LinkedIn, or examples of your work" className={fieldClass} />
+            </label>
+            <label className="block text-sm font-medium">
+              Availability <span className="font-normal text-muted">(optional)</span>
+              <input name="availability" maxLength={500} placeholder="How much time could you contribute, and when could you start?" className={fieldClass} />
+            </label>
+            <button type="submit" className="bg-ink px-6 py-3 font-medium text-cream transition-opacity hover:opacity-80 disabled:opacity-50">
+              {status === "sending" ? "Sending…" : "Submit interest"}
+            </button>
+          </fieldset>
+          {error && <p role="alert" className="text-sm leading-relaxed">{error}</p>}
+        </form>
+      )}
     </div>
   );
 }
