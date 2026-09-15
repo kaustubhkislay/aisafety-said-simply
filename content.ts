@@ -299,18 +299,40 @@ export const team: TeamMember[] = [
 
 export const mentees: TeamMember[] = [
   {
-    name: "Mentee One",
-    role: "SPAR mentee",
-    bio: "Bio coming soon.",
+    "name": "Marian Caballo",
+    "role": "SPAR mentee",
+    "bio": "Marian is a governance TPM at Microsoft with a background in journalism, data visualization, and video. Marian is interested in AI safety product work and how safety research translates into user-facing decisions.",
+    "photo": "/team/marian.webp",
+    "url": "https://www.linkedin.com/in/marian-caballo/",
+    "email": "mcc284@cornell.edu"
   },
   {
-    name: "Mentee Two",
-    role: "SPAR mentee",
-    bio: "Bio coming soon.",
+    "name": "Chase Burns Broderick",
+    "role": "SPAR mentee",
+    "bio": "Chase is a graduate student focusing on AI in University of Washington's Digital Media program. A former newspaper editor with an acting BFA, his media leadership included directing on-the-ground coverage of Seattle's CHOP occupation.",
+    "photo": "/team/chase.webp",
+    "url": "https://www.linkedin.com/in/chaseburnsbroderick/",
+    "email": "cbb24@uw.edu"
   },
   {
-    name: "Mentee Three",
-    role: "SPAR mentee",
-    bio: "Bio coming soon.",
+    "name": "Cory Wu",
+    "role": "SPAR mentee",
+    "bio": "I'm a current fourth-year student at Harvard University studying statistics and computational neuroscience. I'm also a teaching assistant for several graduate statistics courses. In my free time, I enjoy playing soccer and classical piano.",
+    "url": "https://linkedin.com/in/cory-wu",
+    "email": "corywu1234@gmail.com",
+    "photo": "/team/cory.webp"
   },
+  {
+    "name": "Calvin Cao",
+    "role": "SPAR mentee",
+    "bio": ""
+  },
+  {
+    "name": "Elias Krasny",
+    "role": "SPAR mentee",
+    "bio": "Elias is the forecasting lead and a board member at the Virginia AI Security Initiative. He's currently on an exchange semester in Barcelona, where he is helping as an organizer at the AI Safety Barcelona group.",
+    "photo": "/team/elias.webp",
+    "url": "https://www.linkedin.com/in/elias-krasny/",
+    "email": "eliaskrasny@gmail.com"
+  }
 ];

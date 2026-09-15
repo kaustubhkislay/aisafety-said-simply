@@ -105,10 +105,32 @@ export default function Team() {
           SPAR mentees
         </h2>
         <div className="mt-8 grid gap-8 sm:grid-cols-3 sm:gap-6">
-          {mentees.map(({ name, bio }) => (
+          {mentees.map(({ name, bio, photo, email, url }) => (
             <div key={name} className="pt-4">
+              {photo ? (
+                <Image
+                  src={photo}
+                  alt={name}
+                  width={640}
+                  height={640}
+                  sizes="160px"
+                  className="mb-5 aspect-square w-40 rounded-card object-cover"
+                />
+              ) : (
+                <div aria-hidden="true" className="mb-5 flex h-40 w-40 items-center justify-center rounded-card bg-paper-2 text-4xl text-muted">
+                  {name.charAt(0)}
+                </div>
+              )}
               <h3 className="font-semibold text-ink">{name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{bio}</p>
+              <div className="mt-2 flex items-center gap-3">
+                {email && <CopyEmailButton email={email} name={name} />}
+                {url && (
+                  <a href={url} target="_blank" rel="noopener noreferrer" aria-label={`${name} on LinkedIn`} title="LinkedIn" className="text-muted transition-colors duration-150 ease-out hover:text-accent">
+                    <LinkedInIcon />
+                  </a>
+                )}
+              </div>
+              {bio && <p className="mt-3 text-sm leading-relaxed text-muted">{bio}</p>}
             </div>
           ))}
         </div>
