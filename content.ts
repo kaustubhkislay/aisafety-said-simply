@@ -325,7 +325,10 @@ export const mentees: TeamMember[] = [
   {
     "name": "Calvin Cao",
     "role": "SPAR mentee",
-    "bio": ""
+    "bio": "Calvin is the president of University of Western Ontario AI Safety and studies computer science. In the past, he has researched diffusion models and AI for remote sensing, and worked in media and communications for a provincial unemployment agency.",
+    "photo": "/team/calvin_pfp.png",
+    "url": "https://www.linkedin.com/in/calvinkcao/",
+    "email": "caocalvin@outlook.com"
   },
   {
     "name": "Elias Krasny",

@@ -22,14 +22,29 @@ function MailIcon() {
 
 export default function CopyEmailButton({ email, name }: { email: string; name: string }) {
   const [message, setMessage] = useState("");
+  const container = useRef<HTMLSpanElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => () => {
     if (timer.current) clearTimeout(timer.current);
   }, []);
 
+  useEffect(() => {
+    if (!message) return;
+
+    const dismissOnOutsideClick = (event: PointerEvent) => {
+      if (event.target instanceof Node && !container.current?.contains(event.target)) {
+        if (timer.current) clearTimeout(timer.current);
+        setMessage("");
+      }
+    };
+
+    document.addEventListener("pointerdown", dismissOnOutsideClick);
+    return () => document.removeEventListener("pointerdown", dismissOnOutsideClick);
+  }, [message]);
+
   return (
-    <span className="relative inline-flex">
+    <span ref={container} className="relative inline-flex">
       <button
         type="button"
         aria-label={`Copy ${name}'s email address`}
@@ -43,7 +58,7 @@ export default function CopyEmailButton({ email, name }: { email: string; name: 
           } catch {
             setMessage(`Could not copy. Email: ${email}`);
           }
-          timer.current = setTimeout(() => setMessage(""), 5000);
+          timer.current = setTimeout(() => setMessage(""), 1200);
         }}
       >
         <MailIcon />
