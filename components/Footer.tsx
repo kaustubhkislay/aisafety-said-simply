@@ -31,6 +31,9 @@ export default function Footer() {
             <Link href="/contact" className="text-cream opacity-90 hover:underline">
               Contact
             </Link>
+            <Link href="/media-guide" className="text-cream opacity-90 hover:underline">
+              Media guide
+            </Link>
             <a
               href={`mailto:${site.contactEmail}`}
               className="text-cream opacity-90 hover:underline"

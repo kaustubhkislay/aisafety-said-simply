@@ -4,6 +4,7 @@ import { site } from "@/content";
 
 const links = [
   { label: "Library", href: "/#library" },
+  { label: "Media guide", href: "/media-guide" },
   { label: "Team", href: "/team" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
