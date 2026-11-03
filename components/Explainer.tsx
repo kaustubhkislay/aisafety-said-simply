@@ -63,8 +63,13 @@ export function Details({
 }) {
   return (
     <details className="aside">
-      <summary>{summary}</summary>
-      {children}
+      <summary>
+        <svg viewBox="0 0 10 10" aria-hidden="true">
+          <path d="M2 1 L9 5 L2 9 Z" />
+        </svg>
+        {summary}
+      </summary>
+      <div className="aside-body">{children}</div>
     </details>
   );
 }

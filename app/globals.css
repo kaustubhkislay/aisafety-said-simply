@@ -142,7 +142,7 @@ button:not(:disabled) { cursor: pointer; }
 .writeup .byline a { color: var(--writeup-muted); text-underline-offset: 3px; text-decoration-color: var(--writeup-hairline); }
 .writeup .byline a:hover { color: var(--color-ink); }
 
-.writeup .colophon { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--writeup-hairline); font-size: 13.5px; color: var(--writeup-muted); }
+.writeup .colophon { margin-top: 56px; font-size: 13.5px; color: var(--writeup-muted); }
 .writeup .colophon a { color: var(--writeup-muted); }
 
 .writeup .transcript { margin: 36px 0; }
@@ -167,14 +167,21 @@ button:not(:disabled) { cursor: pointer; }
 
 .writeup .example { margin: 0 0 16px; padding-left: 16px; border-left: 2px solid var(--color-hero-orange); }
 
-.writeup .aside { margin: 24px 0; padding: 10px 0; border-block: 1px solid var(--writeup-hairline); }
-.writeup .aside summary { cursor: pointer; font-size: 15px; color: var(--color-hero-orange); }
-.writeup .aside summary:hover { color: var(--color-ink); }
-.writeup .aside[open] summary { margin-bottom: 10px; }
+/* Dropdowns, after ai-2040.com: an italic question with a small turning
+   arrow, and an indented body with a thin accent rule. No boxes or lines. */
+.writeup .aside { margin: 20px 0; }
+.writeup .aside summary { display: flex; align-items: baseline; gap: 10px; list-style: none; cursor: pointer; font-style: italic; }
+.writeup .aside summary::-webkit-details-marker { display: none; }
+.writeup .aside summary svg { flex: none; width: 0.6em; height: 0.6em; fill: var(--color-hero-orange); transition: transform 150ms ease-out; }
+.writeup .aside summary:hover { color: var(--color-hero-orange); }
+.writeup .aside[open] summary svg { transform: rotate(90deg); }
+.writeup .aside-body { margin: 14px 0 0 4px; padding: 2px 0 2px 24px; border-left: 1px solid var(--color-hero-orange); font-size: 0.94em; }
+.writeup .aside-body > :first-child { margin-top: 0; }
+.writeup .aside-body > :last-child { margin-bottom: 0; }
 
 .writeup .tablewrap { margin: 24px 0 32px; overflow-x: auto; }
 .writeup table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
-.writeup th, .writeup td { padding: 10px 12px 10px 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--writeup-hairline); }
+.writeup th, .writeup td { padding: 10px 16px 10px 0; text-align: left; vertical-align: top; }
 .writeup th { font-weight: 400; color: var(--writeup-muted); }
 .writeup td strong { display: block; margin-bottom: 2px; font-weight: 400; color: var(--color-hero-orange); }
 .writeup td:first-child strong { color: var(--color-ink); }

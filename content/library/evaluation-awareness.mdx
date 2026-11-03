@@ -40,7 +40,7 @@ During actual evaluations, awareness is often detected through the model’s cha
 
 How often models mention being tested is only a minimum, since models can also recognize evaluations without ever saying so.
 
-<Details summary="Technical details">
+<Details summary="How can we tell if a model is aware but doesn’t say so?">
 
 Anthropic’s <Sidenote term="interpretability">Research that examines a model’s internal activity to understand concept representations and how it reaches its outputs.</Sidenote> team found an internal signal in Claude Sonnet 4.5 associated with the concept “this is a test.” Turning that signal down made the model stop mentioning tests, and in some cases made it behave worse. In the Claude Mythos system card, Anthropic used similar tools to find awareness the model never verbalized.
 
