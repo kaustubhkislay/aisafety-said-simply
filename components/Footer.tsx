@@ -23,7 +23,7 @@ export default function Footer() {
               Team
             </Link>
             <Link
-              href="/#library"
+              href="/library"
               className="text-cream opacity-90 hover:underline"
             >
               Library

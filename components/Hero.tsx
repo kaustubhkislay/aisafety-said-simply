@@ -1,3 +1,4 @@
+import Link from "next/link";
 import localFont from "next/font/local";
 import { site } from "@/content";
 
@@ -19,12 +20,12 @@ export default function Hero() {
           {site.tagline.split("said simply")[1]}
         </h1>
         <div className="mt-12 flex flex-wrap items-start gap-3">
-          <a
-            href="#library"
+          <Link
+            href="/library"
             className="rounded-card bg-accent px-6 py-3 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
           >
             Explore the library
-          </a>
+          </Link>
           <a
             href="/team"
             className="rounded-card bg-paper-2 px-6 py-3 font-medium whitespace-nowrap text-ink transition-colors duration-150 ease-out hover:bg-paper-2"

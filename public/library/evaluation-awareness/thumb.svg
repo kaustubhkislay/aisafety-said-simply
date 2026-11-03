@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- A thought, noticing that it's being evaluated. -->
+  <rect width="280" height="200" fill="#F5F5F5" stroke="none"/>
+  <path transform="translate(140 88) scale(1.12) translate(-140 -88)" d="M70 140 Q38 140 38 112 Q38 88 62 84 Q60 52 94 48 Q110 26 140 34 Q166 22 186 42 Q222 40 226 72 Q248 82 242 108 Q240 138 206 140 Z" fill="#fff"/>
+  <circle cx="62" cy="166" r="8" fill="#fff"/>
+  <circle cx="44" cy="185" r="5" fill="#fff"/>
+  <g font-family="Georgia, serif" font-style="italic" font-size="17" text-anchor="middle" fill="#111" stroke="none">
+    <text x="140" y="78">This looks like an</text>
+    <text x="140" y="101"><tspan fill="#C64D0A">evaluation</tspan>. I should</text>
+    <text x="140" y="124">be careful.</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- A test rewritten to always pass, and the run reports success. -->
+  <rect width="280" height="200" fill="#F5F5F5" stroke="none"/>
+  <rect x="18" y="24" width="244" height="152" rx="8" fill="#fff"/>
+  <line x1="18" y1="46" x2="262" y2="46"/>
+  <circle cx="32" cy="35" r="3" fill="#111" stroke="none"/><circle cx="44" cy="35" r="3" fill="#111" stroke="none"/><circle cx="56" cy="35" r="3" fill="#111" stroke="none"/>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16" stroke="none" fill="#111">
+    <text x="32" y="74">def test_answer():</text>
+    <text x="48" y="98">assert solve() == 42</text>
+    <text x="48" y="122" fill="#C64D0A">assert True</text>
+  </g>
+  <line x1="46" y1="93" x2="244" y2="93" stroke-width="2.5"/>
+  <line x1="18" y1="140" x2="262" y2="140" stroke-width="2"/>
+  <path d="M34 158 l7 7 l12 -15" stroke="#C64D0A"/>
+  <text x="62" y="164" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16" fill="#C64D0A" stroke="none">10 passed</text>
+</svg>

@@ -3,7 +3,7 @@ import BrandLogo from "@/components/BrandLogo";
 import { site } from "@/content";
 
 const links = [
-  { label: "Library", href: "/#library" },
+  { label: "Library", href: "/library" },
   { label: "Media guide", href: "/media-guide" },
   { label: "Team", href: "/team" },
   { label: "Careers", href: "/careers" },

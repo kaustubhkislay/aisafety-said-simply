@@ -1,7 +1,12 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
-import { library } from "@/content";
+import Toc from "@/components/Toc";
+import { library, team } from "@/content";
+import { fontVariables } from "@/lib/explainerFonts";
+import { slugify } from "@/lib/slugify";
 
 // Draft-only slugs render for template verification but are not in the catalog.
 const DRAFT_SLUGS = ["_template"];
@@ -48,6 +53,32 @@ function formatUpdated(iso: string): string {
   });
 }
 
+/** "2026-11-02" → "November 2nd, 2026", as in the rewardhacking.org byline. */
+function formatDay(iso: string): string {
+  const date = new Date(`${iso}T00:00:00Z`);
+  const day = date.getUTCDate();
+  const suffix =
+    day % 10 === 1 && day !== 11 ? "st"
+    : day % 10 === 2 && day !== 12 ? "nd"
+    : day % 10 === 3 && day !== 13 ? "rd"
+    : "th";
+  const month = date.toLocaleDateString("en-US", { month: "long", timeZone: "UTC" });
+  return `${month} ${day}${suffix}, ${date.getUTCFullYear()}`;
+}
+
+/** The article's ## and ### headings, for the contents lists. */
+async function readSections(slug: string) {
+  const source = await readFile(
+    path.join(process.cwd(), "content/library", `${slug}.mdx`),
+    "utf8",
+  );
+  return Array.from(source.matchAll(/^(##|###) (.+)$/gm), ([, hashes, label]) => ({
+    id: slugify(label.trim()),
+    label: label.trim(),
+    sub: hashes === "###",
+  }));
+}
+
 export default async function TopicPage({
   params,
 }: {
@@ -58,55 +89,64 @@ export default async function TopicPage({
   if (!item && !DRAFT_SLUGS.includes(slug)) notFound();
 
   const { default: Body } = await import(`@/content/library/${slug}.mdx`);
+  const sections = await readSections(slug);
 
-  const meta = item
-    ? [
-        item.formats.join(" · "),
-        item.audiences.join(" · "),
-        item.readingMinutes ? `~${item.readingMinutes} min` : null,
-        item.updated ? `Updated ${formatUpdated(item.updated)}` : null,
-      ].filter(Boolean)
-    : ["Draft — not in the catalog"];
+  const author = team.find((member) => member.name === item?.author);
+  const meta = [
+    item?.readingMinutes ? `${item.readingMinutes} min read` : null,
+    item?.updated ? `Updated ${formatUpdated(item.updated)}` : null,
+    item ? null : "Draft — not in the catalog",
+  ].filter(Boolean);
 
   return (
-    <main className="flex min-h-full flex-col">
-      <article className="mx-auto w-full max-w-5xl px-6 pt-14 pb-16 sm:pb-20">
-        <header className="max-w-prose">
-          <h1 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink sm:text-4xl">
-            {item?.title ?? "Template"}
-          </h1>
-          {item && (
-            <p className="mt-4 text-lg leading-relaxed text-muted">
-              {item.hook}
-            </p>
-          )}
-          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.08em] text-muted">
-            {meta.join("  ·  ")}
+    <main className={`flex min-h-full flex-col ${fontVariables}`}>
+      <Toc sections={sections} />
+      <article className="writeup w-full">
+        <h1 id="top">{item?.title ?? "Template"}</h1>
+        {item?.author && (
+          <p className="byline">
+            by{" "}
+            {author?.website || author?.url ? (
+              <a href={author.website ?? author.url} target="_blank" rel="noopener noreferrer">
+                {item.author}
+              </a>
+            ) : (
+              item.author
+            )}
+            {item.updated && `, ${formatDay(item.updated)}`}
           </p>
-          <p className="mt-2 text-xs text-muted">
-            Free to share and adapt (
-            <a
-              href="https://creativecommons.org/licenses/by/4.0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-ink"
-            >
-              CC BY 4.0
-            </a>
-            ).
-          </p>
+        )}
+        {sections.length > 0 && (
+          <nav className="toc-inline" aria-label="Contents">
+            <p>Contents</p>
+            <ol>
+              {sections.map(({ id, label, sub }) => (
+                <li key={id} className={sub ? "sub" : undefined}>
+                  <a href={`#${id}`}>{label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+        <Body />
+        <p className="colophon">
+          {meta.join(" · ")}
+          {meta.length > 0 && " · "}
+          Free to share under{" "}
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CC BY 4.0
+          </a>
           {item?.pdf && (
-            <a
-              href={item.pdf}
-              className="mt-6 inline-block rounded-card bg-accent px-5 py-2.5 text-sm font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
-            >
-              Download the one-pager (PDF)
-            </a>
+            <>
+              {" · "}
+              <a href={item.pdf}>One-pager (PDF)</a>
+            </>
           )}
-        </header>
-        <div className="mt-6 max-w-prose pt-2">
-          <Body />
-        </div>
+        </p>
       </article>
       <Footer />
     </main>

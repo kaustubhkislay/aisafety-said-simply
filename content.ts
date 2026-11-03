@@ -2,11 +2,16 @@ export type Format = "Explainer" | "Demo" | "Video";
 
 export type Audience = "Policymakers" | "Educators" | "Public";
 
+/** Library page filters. An item can sit under several. */
+export const topics = ["Technical", "Research", "Policy"] as const;
+export type Topic = (typeof topics)[number];
+
 export type LibraryItem = {
   title: string;
   hook: string;
   formats: Format[];
   audiences: Audience[];
+  topics: Topic[];
   status: "live" | "in-production";
   /** Set when the piece is hosted on this domain (renders at /library/[slug]). */
   slug?: string;
@@ -15,8 +20,12 @@ export type LibraryItem = {
   /** Question-phrased search aliases, e.g. "can AI pretend to be safe?" */
   aliases?: string[];
   readingMinutes?: number;
+  /** Writer's name, matching an entry in `team` (linked from the byline). */
+  author?: string;
   /** ISO date of last substantive update, e.g. "2026-08-29". */
   updated?: string;
+  /** Path under /public to a thumbnail for the library page, e.g. a key figure. */
+  image?: string;
   /** Path under /public to a downloadable one-pager, e.g. "/onepagers/ai-control.pdf". */
   pdf?: string;
 };
@@ -185,18 +194,21 @@ export const faq: FaqItem[] = [
 export const library: LibraryItem[] = [
   {
     title: "Reward hacking",
-    hook: "Real, documented cases of AI systems gaming their objectives — searchable and severity-rated.",
+    hook: "AI systems sometimes find shortcuts that score well without doing the intended task. A searchable collection of reward hacking in the wild.",
     formats: ["Explainer", "Demo"],
     audiences: ["Policymakers", "Educators", "Public"],
+    topics: ["Technical"],
     aliases: ["what is reward hacking?", "examples of AI gaming its objectives"],
     status: "live",
     url: "https://rewardhacking.org",
+    image: "/library/reward-hacking/thumb.svg",
   },
   {
     title: "Sleeper agents & secret loyalties",
     hook: "How a model can behave perfectly in testing while carrying hidden goals for later.",
     formats: ["Explainer"],
     audiences: ["Policymakers", "Public"],
+    topics: ["Technical", "Research"],
     aliases: ["can AI pretend to be safe?", "what is a sleeper agent?"],
     status: "in-production",
   },
@@ -205,22 +217,30 @@ export const library: LibraryItem[] = [
     hook: "Getting useful work out of AI systems we don't fully trust — and catching them if they defect.",
     formats: ["Explainer", "Demo"],
     audiences: ["Policymakers", "Educators"],
+    topics: ["Technical", "Research"],
     aliases: ["how do we use AI we don't trust?"],
     status: "in-production",
   },
   {
-    title: "Eval awareness & eval gaming",
-    hook: "What happens when a model can tell it's being tested — and acts accordingly.",
+    title: "Evaluation awareness",
+    hook: "Models are getting better at telling tests from real life, which makes it harder to trust what tests tell us.",
     formats: ["Explainer"],
     audiences: ["Educators", "Policymakers"],
+    topics: ["Technical"],
     aliases: ["can AI tell when it's being tested?"],
-    status: "in-production",
+    status: "live",
+    slug: "evaluation-awareness",
+    author: "Christine Corry",
+    readingMinutes: 7,
+    updated: "2026-11-02",
+    image: "/library/evaluation-awareness/thumb.svg",
   },
   {
     title: "Chain-of-thought unfaithfulness",
     hook: "A model's written reasoning doesn't always reflect why it actually did what it did.",
     formats: ["Explainer", "Video"],
     audiences: ["Educators", "Public"],
+    topics: ["Technical", "Research"],
     aliases: ["does AI reasoning reflect what it actually does?"],
     status: "in-production",
   },
@@ -229,6 +249,7 @@ export const library: LibraryItem[] = [
     hook: "How much easier do frontier models make it to cause serious harm — and how we measure that.",
     formats: ["Explainer"],
     audiences: ["Policymakers"],
+    topics: ["Policy", "Technical"],
     aliases: ["how much does AI help attackers?"],
     status: "in-production",
   },
@@ -237,6 +258,7 @@ export const library: LibraryItem[] = [
     hook: "How treaties on AI could actually be enforced: verifying what chips are doing, and where.",
     formats: ["Explainer"],
     audiences: ["Policymakers"],
+    topics: ["Policy"],
     aliases: ["how would an AI treaty be enforced?"],
     status: "in-production",
   },
@@ -245,6 +267,7 @@ export const library: LibraryItem[] = [
     hook: "The filters wrapped around AI models — what they catch, what they miss, and why it's hard.",
     formats: ["Explainer", "Demo"],
     audiences: ["Educators", "Public"],
+    topics: ["Technical"],
     aliases: ["how do AI content filters work?"],
     status: "in-production",
   },
@@ -253,6 +276,7 @@ export const library: LibraryItem[] = [
     hook: "Could writing about treacherous AI teach future models to be treacherous?",
     formats: ["Explainer"],
     audiences: ["Public", "Educators"],
+    topics: ["Research"],
     aliases: ["can writing about bad AI cause bad AI?"],
     status: "in-production",
   },
@@ -261,6 +285,7 @@ export const library: LibraryItem[] = [
     hook: "If an AI could revise its own values, where would they settle — and would we like the result?",
     formats: ["Explainer"],
     audiences: ["Public"],
+    topics: ["Research"],
     aliases: ["what would AI values become?"],
     status: "in-production",
   },
@@ -272,6 +297,8 @@ export type TeamMember = {
   bio: string;
   photo?: string;
   url?: string;
+  /** Personal site; explainer bylines link here before `url`. */
+  website?: string;
   calendly?: string;
   email?: string;
 };
@@ -292,6 +319,7 @@ export const team: TeamMember[] = [
     photo: "/team/christine.webp",
     bio: "Christine is a researcher with experience at UChicago's XLab Second Look, NASA Ames, and the Rubin Observatory. Her most recent research focused on single forward pass evals and emergent misalignment.",
     url: "https://www.linkedin.com/in/christinecorry/",
+    website: "https://christinecorry.com",
     calendly: "https://calendly.com/christinecorry",
     email: "christine@aisafetysaidsimply.com",
   },
