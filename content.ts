@@ -26,6 +26,8 @@ export type LibraryItem = {
   updated?: string;
   /** Path under /public to a thumbnail for the library page, e.g. a key figure. */
   image?: string;
+  /** Path under /public to a 1200×630 PNG used as the link preview. */
+  shareImage?: string;
   /** Path under /public to a downloadable one-pager, e.g. "/onepagers/ai-control.pdf". */
   pdf?: string;
 };
@@ -234,6 +236,7 @@ export const library: LibraryItem[] = [
     readingMinutes: 7,
     updated: "2026-11-02",
     image: "/library/evaluation-awareness/thumb.svg",
+    shareImage: "/library/evaluation-awareness/og.png",
   },
   {
     title: "Chain-of-thought unfaithfulness",

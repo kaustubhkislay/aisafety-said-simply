@@ -41,6 +41,13 @@ export async function generateMetadata({
       url: `/library/${slug}`,
       siteName: "AI Safety Said Simply",
       type: "article",
+      images: item.shareImage ? [{ url: item.shareImage, width: 1200, height: 630 }] : undefined,
+    },
+    twitter: {
+      card: item.shareImage ? "summary_large_image" : "summary",
+      title: item.title,
+      description: item.hook,
+      images: item.shareImage ? [item.shareImage] : undefined,
     },
   };
 }
