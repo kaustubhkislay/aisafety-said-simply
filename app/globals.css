@@ -146,7 +146,7 @@ button:not(:disabled) { cursor: pointer; }
 .writeup .colophon a { color: var(--writeup-muted); }
 
 .writeup .transcript { margin: 36px 0; }
-.writeup .transcript-body { font-family: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace; font-size: 15.5px; padding: 18px 22px 4px; background: var(--color-paper-2); border-left: 2px solid var(--color-hero-orange); }
+.writeup .transcript-body { font-family: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace; font-size: 14px; padding: 18px 22px 4px; background: var(--color-paper-2); border-left: 2px solid var(--color-hero-orange); }
 .writeup .transcript-speaker {
   margin-bottom: 8px;
   font-family: inherit;
