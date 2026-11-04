@@ -136,24 +136,26 @@ export default async function TopicPage({
           </nav>
         )}
         <Body />
-        <p className="colophon">
-          {meta.join(" · ")}
-          {meta.length > 0 && " · "}
-          Free to share under{" "}
-          <a
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CC BY 4.0
-          </a>
-          {item?.pdf && (
-            <>
-              {" · "}
-              <a href={item.pdf}>One-pager (PDF)</a>
-            </>
-          )}
-        </p>
+        {slug !== "evaluation-awareness" && (
+          <p className="colophon">
+            {meta.join(" · ")}
+            {meta.length > 0 && " · "}
+            Free to share under{" "}
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CC BY 4.0
+            </a>
+            {item?.pdf && (
+              <>
+                {" · "}
+                <a href={item.pdf}>One-pager (PDF)</a>
+              </>
+            )}
+          </p>
+        )}
       </article>
       <Footer />
     </main>
