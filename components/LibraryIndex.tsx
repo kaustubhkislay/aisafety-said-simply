@@ -108,9 +108,6 @@ export default function LibraryIndex({ items }: { items: LibraryItem[] }) {
             </li>
           ))}
         </ul>
-        <p className="count" aria-live="polite">
-          {shown.length} {shown.length === 1 ? "piece" : "pieces"}
-        </p>
       </nav>
       <ul className="entries">
         {shown.map((item) => (

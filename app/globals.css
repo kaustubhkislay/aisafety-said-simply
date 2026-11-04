@@ -263,11 +263,10 @@ button:not(:disabled) { cursor: pointer; }
 .library-index .rail button { display: block; width: 100%; padding: 5px 0 5px 16px; margin-left: -1px; border-left: 2px solid transparent; text-align: left; font-size: 16px; color: var(--writeup-muted); background: none; cursor: pointer; }
 .library-index .rail button:hover { color: var(--color-ink); }
 .library-index .rail button[aria-pressed="true"] { color: var(--color-ink); border-left-color: var(--color-hero-orange); }
-.library-index .count { margin: 18px 0 0; padding-left: 16px; font-size: 14px; color: var(--writeup-muted); }
 
 .library-index .entries { margin: 0; padding: 0; list-style: none; }
-.library-index .entry { display: grid; gap: 32px; padding: 0 0 32px; margin: 0 0 32px; border-bottom: 1px solid var(--writeup-hairline); }
-.library-index .entry:last-child { border-bottom: 0; margin-bottom: 8px; }
+.library-index .entry { display: grid; gap: 32px; padding: 0 0 32px; margin: 0 0 32px; }
+.library-index .entry:last-child { margin-bottom: 8px; }
 .library-index .entry.has-image { grid-template-columns: minmax(0, 1fr) 280px; }
 .library-index .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
 .library-index .tag { padding: 1px 8px; font-size: 13px; color: var(--writeup-muted); border: 1px solid var(--writeup-hairline); }
@@ -287,7 +286,6 @@ button:not(:disabled) { cursor: pointer; }
   .library-index .rail ul { display: flex; flex-wrap: wrap; gap: 8px; border: 0; }
   .library-index .rail button { width: auto; margin: 0; padding: 5px 14px; border: 1px solid var(--writeup-hairline); }
   .library-index .rail button[aria-pressed="true"] { color: #fff; background: var(--color-hero-orange); border-color: var(--color-hero-orange); }
-  .library-index .count { margin: 0; padding: 0; }
 }
 @media (max-width: 640px) {
   .library-index { padding-inline: 18px; }
