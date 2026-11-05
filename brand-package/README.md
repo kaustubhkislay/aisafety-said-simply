@@ -31,4 +31,4 @@ These assets preserve the existing website identity. The yarn mark is a shared o
 
 ## Social and video templates
 
-The `social` folder contains LinkedIn and X banners. The `video` folder contains 1920 × 1080 title and end cards. SVG files remain editable; PNG files are ready to use. Replace the bracketed topic on the title card before export. Keep the full name and domain visible.
+The `social` folder contains LinkedIn and X banners. Covers show only “AI Said Simply”, with no yarn mark, tagline, or domain. The `video` folder contains 1920 × 1080 title and end cards. SVG files remain editable; PNG files are ready to use. Replace the bracketed topic on the title card before export. Keep the full name and domain visible.
