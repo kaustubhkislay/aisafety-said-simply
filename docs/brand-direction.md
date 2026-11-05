@@ -31,7 +31,7 @@ controls, and the wordmark use Helvetica, then Helvetica Neue, Arial, and a
 system sans-serif fallback. The site does not bundle a proprietary font file.
 Inter and Newsreader imports have been removed.
 
-The visible text logo is exactly “AI Said Simply”, in bold Helvetica with tight tracking,
+The visible text logo is exactly “AISS”, in bold Helvetica with tight tracking,
 to the right of the Noto yarn icon. `BrandLogo.tsx` shares the lockup between
 the header and footer. Its accessible name remains “AI Said Simply”.
 
@@ -40,7 +40,7 @@ the header and footer. Its accessible name remains “AI Said Simply”.
 The current direction is industrial, professional minimalism: white surfaces,
 black type, neutral gray secondary text, Helvetica throughout, square controls,
 and thin rules. Use consistent alignment for structure, without numbered section labels.
-The yarn icon remains a static monochrome brand mark beside AI Said Simply.
+The yarn icon remains a static monochrome brand mark beside AISS.
 Keep photographs in their original full color. Do not add colored interface accents, decorative textures,
 gradients, or animations. Preserve the existing content and routes.
 
@@ -81,3 +81,7 @@ Replaced the Communications and Policy tabs with one Join our team form. Require
 Editor: https://docs.google.com/forms/d/14-Xn_bJ7bkyjamfOmpTmSZMSFEEm7qEsMy5BB_IFblY/edit
 
 Respondent: https://docs.google.com/forms/d/e/1FAIpQLSfI143yyq1QOhyMCH-bKztpuIgBT7RITbxr9H5QyI7bargH1Q/viewform
+
+## AISS visual abbreviation — 2026-11-05
+
+Use AISS in the website wordmark, logo exports, and social covers. This adapts the earlier AISSS design to the new name. Keep AI Said Simply as the organization name, accessible label, and ordinary text. Covers contain only AISS on white, with no icon, subtitle, or link.

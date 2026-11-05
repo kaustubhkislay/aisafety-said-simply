@@ -2,9 +2,9 @@
 
 ## Logo files
 
-Use `logos/AI-Said-Simply-logo-black.svg` on light backgrounds and `logos/AI-Said-Simply-logo-white.svg` on dark backgrounds. The SVG wordmark uses outlines, so it needs no installed font. Use the yarn mark alone for favicons and small profile images. PNG files have transparent backgrounds.
+Use `logos/AI-Said-Simply-logo-black.svg` on light backgrounds and `logos/AI-Said-Simply-logo-white.svg` on dark backgrounds. The logo reads “AISS”. The SVG wordmark uses outlines, so it needs no installed font. Use the yarn mark alone for favicons and small profile images. PNG files have transparent backgrounds.
 
-The horizontal logo matches the website: a 36-unit yarn mark, a 3-unit gap, and a 29-unit bold Helvetica wordmark. Keep the 222:36 proportions. Leave at least one-quarter of the yarn mark height clear around the logo. Use the full logo at 222 pixels wide or larger; use the mark alone below this size.
+The horizontal logo matches the website: a 36-unit yarn mark, a 3-unit gap, and a 29-unit bold Helvetica wordmark. Keep the 102.305:36 proportions. Leave at least one-quarter of the yarn mark height clear around the logo. Use the full logo at 103 pixels wide or larger; use the mark alone below this size.
 
 ## Colours
 
@@ -31,4 +31,4 @@ These assets preserve the existing website identity. The yarn mark is a shared o
 
 ## Social and video templates
 
-The `social` folder contains LinkedIn and X banners. Covers show only “AI Said Simply”, with no yarn mark, tagline, or domain. The `video` folder contains 1920 × 1080 title and end cards. SVG files remain editable; PNG files are ready to use. Replace the bracketed topic on the title card before export. Keep the full name and domain visible.
+The `social` folder contains LinkedIn and X banners. Covers show only “AISS”, with no yarn mark, tagline, or domain. The `video` folder contains 1920 × 1080 title and end cards. SVG files remain editable; PNG files are ready to use. Replace the bracketed topic on the title card before export. Use the AISS logo and keep the domain visible. The organization name remains AI Said Simply.

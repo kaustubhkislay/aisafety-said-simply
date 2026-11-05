@@ -6,7 +6,7 @@ Replace the text in square brackets. Remove any sections that do not fit the top
 
 Use the Word Styles menu to keep the format consistent. The format uses Helvetica body text at 11 points, a 34-point title, 17-point main headings, and 12-point subheadings. Use AISS Takeaway for summary paragraphs and AISS Source for references.
 
-The format uses US Letter pages, 0.85-inch side margins, and automatic page numbers. The logo retains the original proportions and has clear space around it.
+The format uses US Letter pages, 0.85-inch side margins, and automatic page numbers. The logo reads AISS and retains the original symbol and type style and has clear space around it.
 
 ## Brand source
 

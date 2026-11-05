@@ -21,7 +21,7 @@ The user authorized autonomous execution of the rebrand on 4 November 2026. The 
 - [x] Rebased onto current production source to preserve newer article changes.
 - [x] Website name, contact details, metadata, sitemap, robots, and transition note updated locally.
 - [x] Article bodies, topic priorities, citations, and author biographies unchanged.
-- [x] Full-name logos, two-page Word templates, social banners, and video cards prepared.
+- [x] AISS logos, two-page Word templates, social banners, and video cards prepared.
 - [x] Revised logos and Word templates replaced in Drive with the same file IDs and access.
 - [x] Shared project and brand folder names updated.
 - [x] New apex and www attached to the same Vercel project.
@@ -43,12 +43,12 @@ The user authorized autonomous execution of the rebrand on 4 November 2026. The 
 
 | Surface | Status | Owner / link |
 | --- | --- | --- |
-| Brand package | Existing files and ZIP updated; covers show only “AI Said Simply” | [Drive folder](https://drive.google.com/drive/folders/1KlH82QJ-Mg7Pj5Aanxw2pFUMOSc4OzfQ) |
+| Brand package | Existing files and ZIP updated; covers show only “AISS” | [Drive folder](https://drive.google.com/drive/folders/1KlH82QJ-Mg7Pj5Aanxw2pFUMOSc4OzfQ) |
 | Explainer writer role | Name, domain, links, header and footer updated; role unchanged | [Role document](https://docs.google.com/document/d/1qVayZeIUpKDIa7NQgneNNaFxvQI3dYxt6IwctKqUecM/edit) |
 | Google Forms | Feedback and team-interest titles renamed; live integration tests pass | Existing form IDs and success messages remain unchanged |
 | Fillout application | Name, heading, confirmation, logo, theme and workspace renamed; questions and response destination preserved | [Application](https://forms.fillout.com/t/iiTZxSnf9tus) |
 | LinkedIn | Name, slug, website, biography and text-only cover saved; nine followers retained | [Page](https://www.linkedin.com/company/ai-said-simply/) |
-| X | New name present; biography, website and text-only cover saved. Eleven followers retained. Handle change requires the user’s password check. | [Account](https://x.com/AISafetySimply) |
+| X | New name present; biography, website and text-only cover saved. Eleven followers retained. Handle @AISaidSimply is now active; verified in the existing signed-in account. | [Account](https://x.com/AISaidSimply) |
 | Personal website | Affiliation name and URL updated in source; existing hidden-affiliation setting preserved. Commit `fc5f09c`. | `website-1/src/app/page.tsx` |
 | WAISI | Research entry renamed and verified live. Commit `8190cab`; safety description unchanged. | [Research page](https://waisi.org/research) |
 | SPAR | Draft request only; listing owner must edit | [Project](https://www.sparai.org/projects/f26/recK4NKaFBvAEznFB/) |
@@ -99,3 +99,7 @@ No recurring automations were created. Future checks require a later session.
 Search verification DNS records: new domain `rec_7218d65d33d7aead6739cd04`; old domain `rec_699d743f051927f424a6954b`. Keep both records. Google reports “This site is currently moving” from the old domain to the new domain. Search indexing will update over time.
 
 Final inbound check: ImprovMX shows FORWARDED for kaustubh, contact and Christine on the new domain. Old aliases remain active.
+
+## Visual revision — 5 November 2026
+
+The user requested the earlier abbreviated visual style. Website wordmarks, outlined logo exports, social covers, Word headers, and video cards now use AISS. The full organization name and all content remain AI Said Simply. Social covers retain plain white backgrounds with only AISS. The same yarn-only avatars remain. X and LinkedIn covers were saved; the X account now uses @AISaidSimply with eleven followers. The website contact link now targets the new handle. Shared Drive assets and ZIP were overwritten in place with the same access.
