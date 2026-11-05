@@ -33,11 +33,12 @@ export type LibraryItem = {
 };
 
 export const site = {
-  name: "AI Safety Said Simply",
-  tagline: "Complex AI safety topics, said simply.",
+  url: "https://aisaidsimply.com",
+  name: "AI Said Simply",
+  tagline: "Complex AI topics, said simply.",
   description:
-    "Short explainers, interactive demos, and videos on the ideas that matter in AI safety — built for policymakers, journalists, educators, and anyone without hours to spare.",
-  contactEmail: "contact@aisafetysaidsimply.com",
+    "Short explainers, interactive demos, and videos about AI risks and how to address them — for policymakers, journalists, educators, and the public.",
+  contactEmail: "contact@aisaidsimply.com",
 };
 
 export const audiences = [
@@ -314,7 +315,7 @@ export const team: TeamMember[] = [
     photo: "/team/kaustubh.webp",
     url: "https://www.linkedin.com/in/kaustubh-kislay/",
     calendly: "https://calendly.com/kaustubh-kislay/15min",
-    email: "kaustubh@aisafetysaidsimply.com",
+    email: "kaustubh@aisaidsimply.com",
   },
   {
     name: "Christine Corry",
@@ -324,7 +325,7 @@ export const team: TeamMember[] = [
     url: "https://www.linkedin.com/in/christinecorry/",
     website: "https://christinecorry.com",
     calendly: "https://calendly.com/christinecorry",
-    email: "christine@aisafetysaidsimply.com",
+    email: "christine@aisaidsimply.com",
   },
 ];
 

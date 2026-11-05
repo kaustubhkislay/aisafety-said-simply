@@ -1,3 +1,4 @@
+import { site } from "@/content";
 const responseUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSfI143yyq1QOhyMCH-bKztpuIgBT7RITbxr9H5QyI7bargH1Q/formResponse";
 
@@ -50,10 +51,10 @@ export async function POST(request: Request) {
     const html = await result.text();
     const visibleText = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "").replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, "").replace(/<[^>]+>/g, " ");
     if (!result.ok || !visibleText.includes("Thank you. We have received your expression of interest.")) {
-      return Response.json({ error: "We could not confirm receipt. Your text is still here. Please email contact@aisafetysaidsimply.com for help." }, { status: 502 });
+      return Response.json({ error: `We could not confirm receipt. Your text is still here. Please email ${site.contactEmail} for help.` }, { status: 502 });
     }
     return Response.json({ ok: true });
   } catch {
-    return Response.json({ error: "We could not confirm receipt. Your text is still here. Please email contact@aisafetysaidsimply.com for help." }, { status: 502 });
+    return Response.json({ error: `We could not confirm receipt. Your text is still here. Please email ${site.contactEmail} for help.` }, { status: 502 });
   }
 }

@@ -12,7 +12,7 @@ const { POST } = await import(compile(readFileSync(new URL('../app/api/media-gui
   .replace('@/lib/newsletter', newsletter).replace('@/content', content)));
 
 process.env.RESEND_API_KEY = 'test-key';
-process.env.RESEND_FROM = 'AISSS <test@example.com>';
+process.env.RESEND_FROM = 'AI Said Simply <test@example.com>';
 
 const fields = { name: 'Test Reader', email: 'reader@example.com', affiliation: 'University AI safety group', reason: 'We want to prepare for our first media request.' };
 const request = (data = fields, origin = 'https://example.com') => new Request('https://example.com/api/media-guide', {
@@ -47,9 +47,9 @@ test('sends the four fields only to the team and uses the requester as reply-to'
   const upstream = t.mock.method(globalThis, 'fetch', async (url, options) => {
     assert.equal(url, 'https://api.resend.com/emails');
     const body = JSON.parse(options.body);
-    assert.deepEqual(body.to, ['contact@aisafetysaidsimply.com']);
+    assert.deepEqual(body.to, ['contact@aisaidsimply.com']);
     assert.equal(body.reply_to, fields.email);
-    assert.equal(body.subject, 'Media guide request — AISSS');
+    assert.equal(body.subject, 'Media guide request — AI Said Simply');
     for (const value of Object.values(fields)) assert.ok(body.text.includes(value));
     assert.equal(body.html, undefined);
     assert.equal(body.attachments, undefined);

@@ -1,11 +1,13 @@
 "use client";
 
+import { site } from "@/content";
+
 import { useState } from "react";
 
 const fieldClass =
   "mt-2 block w-full rounded-card border border-line bg-card px-3 py-3 font-normal text-ink";
 const failureMessage =
-  "We could not confirm receipt. Please try again or email contact@aisafetysaidsimply.com.";
+  `We could not confirm receipt. Please try again or email ${site.contactEmail}.`;
 
 export default function MediaGuideRequestForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");

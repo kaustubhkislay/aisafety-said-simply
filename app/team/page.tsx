@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import { site, team, mentees } from "@/content";
 
 export const metadata: Metadata = {
-  title: "Team — AI Safety Said Simply",
+  alternates: { canonical: "/team" },
+  title: `Team — ${site.name}`,
   description: `The people behind ${site.name}.`,
 };
 

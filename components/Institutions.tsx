@@ -14,7 +14,7 @@ export default function Institutions() {
           hand it to your colleagues.
         </p>
         <a
-          href={`mailto:${site.contactEmail}?subject=Distributing AI Safety Said Simply materials`}
+          href={`mailto:${site.contactEmail}?subject=Distributing AI Said Simply materials`}
           className="mt-8 inline-block rounded-card bg-accent px-6 py-3 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
         >
           Talk to us about distribution

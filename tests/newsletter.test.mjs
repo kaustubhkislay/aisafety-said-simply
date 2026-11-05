@@ -5,10 +5,16 @@ import ts from 'typescript';
 const compile = source => `data:text/javascript;base64,${Buffer.from(ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText).toString('base64')}`;
 const library = compile(readFileSync(new URL('../lib/newsletter.ts',import.meta.url),'utf8'));
 const {makeToken,readToken} = await import(library);
-const {POST} = await import(compile(readFileSync(new URL('../app/api/subscribe/route.ts',import.meta.url),'utf8').replace('@/lib/newsletter',library)));
-Object.assign(process.env,{RESEND_API_KEY:'test-key',RESEND_FROM:'Test <test@example.com>',RESEND_SEGMENT_ID:'test-segment',NEWSLETTER_SITE_URL:'https://example.com',NEWSLETTER_SIGNING_SECRET:'x'.repeat(64)});
+const content = compile(readFileSync(new URL('../content.ts',import.meta.url),'utf8'));
+const {POST} = await import(compile(readFileSync(new URL('../app/api/subscribe/route.ts',import.meta.url),'utf8').replace('@/lib/newsletter',library).replace('@/content',content)));
+Object.assign(process.env,{RESEND_API_KEY:'test-key',RESEND_FROM:'Test <test@example.com>',RESEND_SEGMENT_ID:'test-segment',NEWSLETTER_SITE_URL:'https://aisaidsimply.com',NEWSLETTER_SIGNING_SECRET:'x'.repeat(64)});
 const secret = process.env.NEWSLETTER_SIGNING_SECRET;
-const request = (data,origin='https://example.com') => new Request('https://example.com/api/subscribe',{method:'POST',headers:{origin},body:JSON.stringify(data)});
+const request = (data,origin='https://aisaidsimply.com') => new Request('https://aisaidsimply.com/api/subscribe',{method:'POST',headers:{origin},body:JSON.stringify(data)});
+test('a pre-rebrand confirmation token remains valid after changing only the host',()=>{
+ const oldUrl = new URL('https://www.aisafetysaidsimply.com/subscribe/confirm#eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MjgwMDAwMH0.GIhpuayWKO3s-zPmUAEBL_kcue_QpjEVe_cVG0bQeeI');
+ const redirected = new URL(oldUrl.pathname + oldUrl.search + oldUrl.hash, 'https://aisaidsimply.com');
+ assert.equal(readToken(redirected.hash.slice(1), secret, 2000), 'test@example.com');
+});
 test('tokens reject tampering, expiry and another signing key',()=>{
  const token=makeToken('test@example.com',secret,1000);
  assert.equal(readToken(token,secret,2000),'test@example.com');
@@ -29,7 +35,8 @@ test('signup sends confirmation and does not create a contact',async t=>{
   assert.equal(url,'https://api.resend.com/emails');
   const body=JSON.parse(options.body);
   assert.deepEqual(body.to,['test@example.com']);
-  assert.ok(body.text.includes('https://example.com/subscribe/confirm#'));
+  assert.ok(body.text.includes('https://aisaidsimply.com/subscribe/confirm#'));
+  assert.equal(body.reply_to, 'contact@aisaidsimply.com');
   assert.ok(options.headers['Idempotency-Key']);
   return Response.json({id:'email-id'});
  });

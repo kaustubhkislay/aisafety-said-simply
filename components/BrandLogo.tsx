@@ -11,7 +11,7 @@ export default function BrandLogo({ light = false }: { light?: boolean }) {
         alt=""
         aria-hidden="true"
       />
-      <span className="brand-wordmark" aria-hidden="true">AISSS</span>
+      <span className="brand-wordmark" aria-hidden="true">{site.name}</span>
     </span>
   );
 }

@@ -31,16 +31,16 @@ controls, and the wordmark use Helvetica, then Helvetica Neue, Arial, and a
 system sans-serif fallback. The site does not bundle a proprietary font file.
 Inter and Newsreader imports have been removed.
 
-The visible text logo is exactly “AISSS”, in bold Helvetica with tight tracking,
+The visible text logo is exactly “AI Said Simply”, in bold Helvetica with tight tracking,
 to the right of the Noto yarn icon. `BrandLogo.tsx` shares the lockup between
-the header and footer. Its accessible name remains “AI Safety Said Simply”.
+the header and footer. Its accessible name remains “AI Said Simply”.
 
 ## Industrial monochrome — 2026-09-10
 
 The current direction is industrial, professional minimalism: white surfaces,
 black type, neutral gray secondary text, Helvetica throughout, square controls,
 and thin rules. Use consistent alignment for structure, without numbered section labels.
-The yarn icon remains a static monochrome brand mark beside AISSS.
+The yarn icon remains a static monochrome brand mark beside AI Said Simply.
 Keep photographs in their original full color. Do not add colored interface accents, decorative textures,
 gradients, or animations. Preserve the existing content and routes.
 
@@ -61,8 +61,8 @@ Omit visible status words; retain accessible status text for screen readers.
 
 Contact feedback renders native fields on the website and submits through
 `/api/feedback` to the published Google Form. The Google iframe stayed blank in
-the in-app preview, so it is not used. A direct Google Form link remains as a fallback. The source form is AI Safety Said Simply (Feedback) in the
-user-selected AI Safety Said Simply Drive folder. Name and email are optional;
+the in-app preview, so it is not used. A direct Google Form link remains as a fallback. The source form is AI Said Simply (Feedback) in the
+user-selected AI Said Simply Drive folder. Name and email are optional;
 feedback is required. The form is published and does not expose response summaries.
 
 Editor: https://docs.google.com/forms/d/1AH95p-s7_zN1IGlxcCPqw6LXXrsMUNEv2iLgHPthCsQ/edit

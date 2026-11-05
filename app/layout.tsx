@@ -3,25 +3,26 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "@/components/Nav";
 import "./globals.css";
+import { site } from "@/content";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.aisafetysaidsimply.com"),
-  title: "AI Safety Said Simply",
+  metadataBase: new URL(site.url),
+  title: site.name,
   description:
-    "Complex AI safety topics, explained in short, engaging forms — explainers, demos, and videos for policymakers, journalists, educators, and the public.",
+    site.description,
   openGraph: {
-    title: "AI Safety Said Simply",
+    title: site.name,
     description:
-      "Complex AI safety topics, explained in short, engaging forms — explainers, demos, and videos for policymakers, journalists, educators, and the public.",
+      site.description,
     url: "/",
-    siteName: "AI Safety Said Simply",
+    siteName: site.name,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "AI Safety Said Simply",
+    title: site.name,
     description:
-      "Complex AI safety topics, explained in short, engaging forms — explainers, demos, and videos.",
+      site.description,
   },
 };
 

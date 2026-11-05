@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
 
-const source = readFileSync(new URL('../app/api/team-interest/route.ts', import.meta.url), 'utf8');
+const compile = source => `data:text/javascript;base64,${Buffer.from(ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } }).outputText).toString('base64')}`;
+const content = compile(readFileSync(new URL('../content.ts', import.meta.url), 'utf8'));
+const source = readFileSync(new URL('../app/api/team-interest/route.ts', import.meta.url), 'utf8').replace('@/content', content);
 const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } }).outputText;
 const { POST } = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
 const request = (data, origin = 'http://localhost:3000') => new Request('http://localhost:3000/api/team-interest', {

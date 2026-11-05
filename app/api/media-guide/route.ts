@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       from,
       to: [site.contactEmail],
       reply_to: email,
-      subject: "Media guide request — AISSS",
+      subject: "Media guide request — AI Said Simply",
       text: [
         "Confidential media guide request",
         "",

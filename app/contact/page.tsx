@@ -5,7 +5,8 @@ import FeedbackForm from "@/components/FeedbackForm";
 import { site } from "@/content";
 
 export const metadata: Metadata = {
-  title: "Contact — AI Safety Said Simply",
+  alternates: { canonical: "/contact" },
+  title: `Contact — ${site.name}`,
   description: "Contact the team, join the mailing list, and find our social channels.",
 };
 

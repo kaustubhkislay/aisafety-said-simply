@@ -14,6 +14,9 @@ export default function Footer() {
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-cream opacity-70">
               {site.tagline}
             </p>
+            <p className="mt-3 max-w-sm text-xs leading-relaxed text-cream opacity-70">
+              AI Safety Said Simply is now AI Said Simply. Our team and editorial focus remain the same.
+            </p>
           </div>
           <div className="flex flex-col gap-2 text-sm">
             <Link

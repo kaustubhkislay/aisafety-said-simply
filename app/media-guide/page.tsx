@@ -1,16 +1,17 @@
+import { site } from "@/content";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import MediaGuideRequestForm from "@/components/MediaGuideRequestForm";
 
 const description =
-  "A practical guide for students and university AI safety groups who receive media requests. Request a copy from AI Safety Said Simply.";
+  "A practical guide for students and university AI safety groups who receive media requests. Request a copy from AI Said Simply.";
 
 export const metadata: Metadata = {
-  title: "Media guide — AI Safety Said Simply",
+  title: `Media guide — ${site.name}`,
   description,
   alternates: { canonical: "/media-guide" },
   openGraph: {
-    title: "Media guide — AI Safety Said Simply",
+    title: `Media guide — ${site.name}`,
     description,
     url: "/media-guide",
   },

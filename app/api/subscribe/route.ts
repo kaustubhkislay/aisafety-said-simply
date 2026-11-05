@@ -1,3 +1,4 @@
+import { site } from "@/content";
 import { createHash } from "node:crypto";
 import { makeToken, newsletterConfig, readToken, resendRequest, validEmail } from "@/lib/newsletter";
 
@@ -46,10 +47,10 @@ export async function POST(request: Request) {
     const token = makeToken(email, config.secret);
     const url = `${config.origin}/subscribe/confirm#${token}`;
     const sent = await resendRequest("/emails", config.key, "POST", {
-      from: config.from, to: [email], reply_to: "contact@aisafetysaidsimply.com",
-      subject: "Confirm your AI Safety Said Simply subscription",
-      text: `Confirm your subscription to AI Safety Said Simply: ${url}\n\nYou will receive new explainers, demos, and videos. If you did not request this, ignore this email. This link expires within 48 hours.`,
-      html: `<div style="font-family:Helvetica,Arial,sans-serif;color:#111;max-width:560px;margin:40px auto;padding:24px"><p style="font-size:28px;font-weight:bold">AISSS</p><h1 style="font-size:26px">Confirm your subscription</h1><p>New explainers, demos, and videos from AI Safety Said Simply.</p><p style="margin:32px 0"><a href="${url}" style="background:#111;color:#fff;padding:14px 20px;text-decoration:none">Confirm subscription</a></p><p>If you did not request this, ignore this email. This link expires within 48 hours.</p></div>`,
+      from: config.from, to: [email], reply_to: site.contactEmail,
+      subject: "Confirm your AI Said Simply subscription",
+      text: `Confirm your subscription to AI Said Simply: ${url}\n\nYou will receive new explainers, demos, and videos. If you did not request this, ignore this email. This link expires within 48 hours.`,
+      html: `<div style="font-family:Helvetica,Arial,sans-serif;color:#111;max-width:560px;margin:40px auto;padding:24px"><p style="font-size:28px;font-weight:bold">AI Said Simply</p><h1 style="font-size:26px">Confirm your subscription</h1><p>New explainers, demos, and videos from AI Said Simply.</p><p style="margin:32px 0"><a href="${url}" style="background:#111;color:#fff;padding:14px 20px;text-decoration:none">Confirm subscription</a></p><p>If you did not request this, ignore this email. This link expires within 48 hours.</p></div>`,
     }, `newsletter-${createHash("sha256").update(token).digest("hex")}`);
     if (!sent.ok) throw new Error();
     return Response.json({ ok: true });

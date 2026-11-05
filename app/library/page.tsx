@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import LibraryIndex from "@/components/LibraryIndex";
-import { library } from "@/content";
+import { site, library } from "@/content";
 import { fontVariables } from "@/lib/explainerFonts";
 
 export const metadata: Metadata = {
-  title: "Library — AI Safety Said Simply",
+  alternates: { canonical: "/library" },
+  title: `Library — ${site.name}`,
   description:
-    "Every AI Safety Said Simply explainer, demo and video, filterable by topic.",
+    "Every AI Said Simply explainer, demo and video, filterable by topic.",
 };
 
 // Newest first; undated pieces keep their catalog order after dated ones.

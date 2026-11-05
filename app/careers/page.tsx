@@ -1,16 +1,17 @@
+import { site } from "@/content";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import FormsEmbed from "@/components/FormsEmbed";
 
 const description =
-  "Help people understand AI safety. Explore the Explainer Writer volunteer role at AI Safety Said Simply and apply.";
+  "Help people understand AI safety. Explore the Explainer Writer volunteer role at AI Said Simply and apply.";
 
 export const metadata: Metadata = {
-  title: "Careers — AI Safety Said Simply",
+  title: `Careers — ${site.name}`,
   description,
   alternates: { canonical: "/careers" },
   openGraph: {
-    title: "Careers — AI Safety Said Simply",
+    title: `Careers — ${site.name}`,
     description,
     url: "/careers",
   },

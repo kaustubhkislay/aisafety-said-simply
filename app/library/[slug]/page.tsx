@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Toc from "@/components/Toc";
-import { library, team } from "@/content";
+import { library, team, site } from "@/content";
 import { fontVariables } from "@/lib/explainerFonts";
 import { slugify } from "@/lib/slugify";
 
@@ -31,15 +31,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const item = findItem(slug);
-  if (!item) return { title: "Draft — AI Safety Said Simply" };
+  if (!item) return { title: `Draft — ${site.name}`, robots: { index: false, follow: false } };
   return {
-    title: `${item.title} — AI Safety Said Simply`,
+    title: `${item.title} — ${site.name}`,
+    alternates: { canonical: `/library/${slug}` },
     description: item.hook,
     openGraph: {
       title: item.title,
       description: item.hook,
       url: `/library/${slug}`,
-      siteName: "AI Safety Said Simply",
+      siteName: site.name,
       type: "article",
       images: item.shareImage ? [{ url: item.shareImage, width: 1200, height: 630 }] : undefined,
     },

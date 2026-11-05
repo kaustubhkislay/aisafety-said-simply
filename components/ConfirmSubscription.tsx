@@ -6,7 +6,7 @@ export default function ConfirmSubscription() {
   const [error, setError] = useState("");
   return <div className="mt-6">
     {status === "done" ? <p role="status">You’re subscribed. We’ll email you when new resources are ready.</p> : <>
-      <p>Confirm that you want updates from AI Safety Said Simply.</p>
+      <p>Confirm that you want updates from AI Said Simply.</p>
       <button className="mt-6 bg-ink px-6 py-3 text-cream disabled:opacity-50" disabled={status === "sending"} onClick={async () => {
         setStatus("sending"); setError("");
         try {

@@ -1,22 +1,22 @@
 # Mailing list
 
-The contact page sends confirmation emails through Resend. The recipient must open the link and click Confirm subscription before the server adds them to the AI Safety Said Simply segment.
+The contact page sends confirmation emails through Resend. The recipient must open the link and click Confirm subscription before the server adds them to the AI Said Simply segment.
 
 ## Server configuration
 
 Set these variables in `.env.local` and Vercel Production/Preview settings. Never use a `NEXT_PUBLIC_` prefix or commit secret values.
 
 - `RESEND_API_KEY`: Resend key with email and contact access.
-- `RESEND_FROM`: AI Safety Said Simply <hello@updates.aisafetysaidsimply.com>
+- `RESEND_FROM`: AI Said Simply <hello@updates.aisaidsimply.com>
 - `RESEND_SEGMENT_ID`: 4bb4a19f-eabf-4287-b555-e8950882b189
-- `NEWSLETTER_SITE_URL`: https://www.aisafetysaidsimply.com
+- `NEWSLETTER_SITE_URL`: https://aisaidsimply.com
 - `NEWSLETTER_SIGNING_SECRET`: random secret of at least 32 characters. Rotation invalidates outstanding confirmation links.
 
-The sending domain is updates.aisafetysaidsimply.com. DNS uses a dedicated DKIM record and send.updates SPF/MX records. Existing inbound email records stay separate.
+The sending domain is updates.aisaidsimply.com. DNS uses a dedicated DKIM record and send.updates SPF/MX records. Existing inbound email records stay separate.
 
 ## Send an update
 
-Create a Broadcast in Resend. Select only the **AI Safety Said Simply** segment, use the verified sender, and include Resend's unsubscribe link. Review the preview and send a test before publishing. The website does not send broadcasts automatically.
+Create a Broadcast in Resend. Select only the **AI Said Simply** segment, use the verified sender, and include Resend's unsubscribe link. Review the preview and send a test before publishing. The website does not send broadcasts automatically.
 
 ## Behavior and checks
 
