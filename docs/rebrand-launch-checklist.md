@@ -103,3 +103,8 @@ Final inbound check: ImprovMX shows FORWARDED for kaustubh, contact and Christin
 ## Visual revision — 5 November 2026
 
 The user requested the earlier abbreviated visual style. Website wordmarks, outlined logo exports, social covers, Word headers, and video cards now use AISS. The full organization name and all content remain AI Said Simply. Social covers retain plain white backgrounds with only AISS. The same yarn-only avatars remain. X and LinkedIn covers were saved; the X account now uses @AISaidSimply with eleven followers. The website contact link now targets the new handle. Shared Drive assets and ZIP were overwritten in place with the same access.
+
+
+## Social cover size — 2026-11-05
+
+The user requested larger AISS letters on LinkedIn and X. Both live covers now use approximately 90% of the cover height. LinkedIn leaves space at the left for the profile picture, and the public view confirms all four letters remain visible. X fills nearly the full width. The shared Drive source files, PNG exports, README, and ZIP match these live covers.

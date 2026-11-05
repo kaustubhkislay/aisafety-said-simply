@@ -31,4 +31,4 @@ These assets preserve the existing website identity. The yarn mark is a shared o
 
 ## Social and video templates
 
-The `social` folder contains LinkedIn and X banners. Covers show only “AISS”, with no yarn mark, tagline, or domain. The `video` folder contains 1920 × 1080 title and end cards. SVG files remain editable; PNG files are ready to use. Replace the bracketed topic on the title card before export. Use the AISS logo and keep the domain visible. The organization name remains AI Said Simply.
+The `social` folder contains LinkedIn and X banners. Covers show only “AISS”, with no yarn mark, tagline, or domain. Large outlined Helvetica letters fill the cover height and spread across its width, with a narrow white margin. The LinkedIn cover leaves space for the profile picture on the left so all four letters stay visible. The `video` folder contains 1920 × 1080 title and end cards. SVG files remain editable; PNG files are ready to use. Replace the bracketed topic on the title card before export. Use the AISS logo and keep the domain visible. The organization name remains AI Said Simply.

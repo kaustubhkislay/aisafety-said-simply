@@ -85,3 +85,7 @@ Respondent: https://docs.google.com/forms/d/e/1FAIpQLSfI143yyq1QOhyMCH-bKztpuIgB
 ## AISS visual abbreviation — 2026-11-05
 
 Use AISS in the website wordmark, logo exports, and social covers. This adapts the earlier AISSS design to the new name. Keep AI Said Simply as the organization name, accessible label, and ordinary text. Covers contain only AISS on white, with no icon, subtitle, or link.
+
+## Social cover scale — 2026-11-05
+
+The user requested AISS to fill the entire LinkedIn and X backgrounds. Use large outlined Helvetica letters across each white cover, approximately 90% of its height. X uses 94% of the cover width. LinkedIn reserves the lower-left profile-picture area and fills the remaining width so the A stays readable. Keep small outer margins and only the AISS letters. Distribute the letters without distorting the glyphs.
