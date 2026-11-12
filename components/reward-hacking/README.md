@@ -26,8 +26,10 @@ opening quote. Use the page and Markdown sources for future transfers.
 
 The AISS library groups both parts under "Reward Hacking": the Demo
 links to the searchable corpus on rewardhacking.org, and the Explainer links to
-the local writeup about reward hacking and reward-seeking behavior. The home
-page, library page, and explainer show links to both parts. The explainer retains
+the local writeup about reward hacking and reward-seeking behavior. The homepage
+card uses the same title-and-arrow layout as the other live topics and links
+directly to the explainer. The library page and explainer show links to both
+parts. The explainer retains
 its original article title through the catalog's `articleTitle` field.
 This repository contains the chart aggregates, not the collected report bodies.
 
