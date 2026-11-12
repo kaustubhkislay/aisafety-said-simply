@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: `Media guide — ${site.name}`,
     description,
     url: "/media-guide",
+    images: ["/opengraph-image.png"],
   },
 };
 

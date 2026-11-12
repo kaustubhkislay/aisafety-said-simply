@@ -32,6 +32,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const item = findItem(slug);
   if (!item) return { title: `Draft — ${site.name}`, robots: { index: false, follow: false } };
+  const image = item.shareImage ?? "/opengraph-image.png";
   return {
     title: `${item.title} — ${site.name}`,
     alternates: { canonical: `/library/${slug}` },
@@ -42,13 +43,13 @@ export async function generateMetadata({
       url: `/library/${slug}`,
       siteName: site.name,
       type: "article",
-      images: item.shareImage ? [{ url: item.shareImage, width: 1200, height: 630 }] : undefined,
+      images: [{ url: image, width: 1200, height: 630 }],
     },
     twitter: {
-      card: item.shareImage ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title: item.title,
       description: item.hook,
-      images: item.shareImage ? [item.shareImage] : undefined,
+      images: [image],
     },
   };
 }
