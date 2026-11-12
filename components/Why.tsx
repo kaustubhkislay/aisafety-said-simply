@@ -5,7 +5,7 @@ export default function Why() {
     <section aria-labelledby="why-heading" className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
       <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
         <h2 id="why-heading" className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
-          Why this exists
+          Why This Exists
         </h2>
         <div className="min-w-0">
           <p className="text-2xl leading-snug tracking-tight text-ink-2 sm:text-3xl">

@@ -6,7 +6,7 @@ export default function Library() {
     <section id="library" className="">
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
         <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
-          The library
+          The Library
         </h2>
         <LibraryBrowser items={library} />
       </div>

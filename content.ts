@@ -63,7 +63,7 @@ export const audiences = [
       "Digestible teaching material on AI safety is scattered across platforms — and for many topics, it simply doesn't exist.",
   },
   {
-    audience: "The public",
+    audience: "The Public",
     problem:
       "Nobody comes home from work and reads a dense 5,000-word technical post. The good material caters to people who already understand it.",
   },
