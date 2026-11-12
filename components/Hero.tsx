@@ -16,8 +16,10 @@ export default function Hero() {
         <p className="section-index">{site.name}</p>
         <h1 className="max-w-[1200px] font-display text-[clamp(3.25rem,8.2vw,7.5rem)] font-medium leading-[0.98] tracking-[-0.06em] text-ink">
           <span className={`${redaction.className} font-normal tracking-[-0.035em]`}>{site.tagline.split("said simply")[0]}</span>
-          <span className="text-hero-orange">said simply</span>
-          {site.tagline.split("said simply")[1]}
+          <span className="block whitespace-nowrap">
+            <span className="text-hero-orange">said simply</span>
+            {site.tagline.split("said simply")[1]}
+          </span>
         </h1>
         <div className="mt-12 flex flex-wrap items-start gap-3">
           <Link
