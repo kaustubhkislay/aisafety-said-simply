@@ -33,7 +33,7 @@ export default function Nav() {
           ))}
           <Link
             href="/contact#mailing-list"
-            className="rounded-card bg-accent px-4 py-2 text-sm font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
+            className="rounded-card bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.06em] whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
           >
             Get updates
           </Link>

@@ -24,13 +24,13 @@ export default function Hero() {
         <div className="mt-12 flex flex-wrap items-start gap-3">
           <Link
             href="/library"
-            className="rounded-card bg-accent px-6 py-3 font-medium whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
+            className="rounded-card bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
           >
             Explore the library
           </Link>
           <a
             href="/team"
-            className="rounded-card bg-paper-2 px-6 py-3 font-medium whitespace-nowrap text-ink transition-colors duration-150 ease-out hover:bg-paper-2"
+            className="rounded-card bg-paper-2 px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] whitespace-nowrap text-ink transition-colors duration-150 ease-out hover:bg-paper-2"
           >
             Chat with us
           </a>
