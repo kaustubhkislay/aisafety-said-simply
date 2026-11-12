@@ -234,7 +234,7 @@ export const library: LibraryItem[] = [
     shareImage: "/library/reward-hacking/og.png",
   },
   {
-    title: "Sleeper agents & secret loyalties",
+    title: "Sleeper Agents and Secret Loyalties",
     hook: "How a model can behave perfectly in testing while carrying hidden goals for later.",
     formats: ["Explainer"],
     audiences: ["Policymakers", "Public"],
@@ -243,7 +243,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "AI control",
+    title: "AI Control",
     hook: "Getting useful work out of AI systems we don't fully trust — and catching them if they defect.",
     formats: ["Explainer", "Demo"],
     audiences: ["Policymakers", "Educators"],
@@ -252,7 +252,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "Evaluation awareness",
+    title: "Evaluation Awareness",
     hook: "Models are getting better at telling tests from real life, which makes it harder to trust what tests tell us.",
     formats: ["Explainer"],
     audiences: ["Educators", "Policymakers"],
@@ -267,7 +267,7 @@ export const library: LibraryItem[] = [
     shareImage: "/library/evaluation-awareness/og.png",
   },
   {
-    title: "Chain-of-thought unfaithfulness",
+    title: "Chain-of-Thought Unfaithfulness",
     hook: "A model's written reasoning doesn't always reflect why it actually did what it did.",
     formats: ["Explainer", "Video"],
     audiences: ["Educators", "Public"],
@@ -276,7 +276,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "Bio & cyber uplift",
+    title: "Biological and Cyber Uplift",
     hook: "How much easier do frontier models make it to cause serious harm — and how we measure that.",
     formats: ["Explainer"],
     audiences: ["Policymakers"],
@@ -285,7 +285,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "Compute verification",
+    title: "Compute Verification",
     hook: "How treaties on AI could actually be enforced: verifying what chips are doing, and where.",
     formats: ["Explainer"],
     audiences: ["Policymakers"],
@@ -294,7 +294,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "Safeguards & classifiers",
+    title: "Safeguards and Classifiers",
     hook: "The filters wrapped around AI models — what they catch, what they miss, and why it's hard.",
     formats: ["Explainer", "Demo"],
     audiences: ["Educators", "Public"],
@@ -303,7 +303,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "Self-fulfilling misalignment",
+    title: "Self-Fulfilling Misalignment",
     hook: "Could writing about treacherous AI teach future models to be treacherous?",
     formats: ["Explainer"],
     audiences: ["Public", "Educators"],
@@ -312,7 +312,7 @@ export const library: LibraryItem[] = [
     status: "in-production",
   },
   {
-    title: "Value reflection",
+    title: "Value Reflection",
     hook: "If an AI could revise its own values, where would they settle — and would we like the result?",
     formats: ["Explainer"],
     audiences: ["Public"],
