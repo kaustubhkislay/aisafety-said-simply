@@ -13,7 +13,6 @@ function href(item: LibraryItem) {
 }
 
 function Title({ item }: { item: LibraryItem }) {
-  if (item.parts?.length) return <>{item.title}</>;
   const to = href(item);
   if (!to) return <>{item.title}</>;
   if (item.slug) return <Link href={to}>{item.title}</Link>;
