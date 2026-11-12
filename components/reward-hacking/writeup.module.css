@@ -1,0 +1,109 @@
+/* Preserve the source figures without changing other AISS explainers. */
+.article {
+  --bg: #fff;
+  --ink: #121212;
+  --muted: #6e6a61;
+  --hairline: #00000029;
+  --accent: #b85c22;
+  --serif: Georgia, "Times New Roman", ui-serif, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+.article strong { font-weight: 400; color: inherit; }
+
+.article :global(.casequote) { margin: 36px 0; padding: 0; border: 0; }
+.article :global(.casequote) p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19.5px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  max-width: 60ch;
+  color: var(--ink);
+}
+.article :global(.casequote) cite { font-style: normal; font-size: 13.5px; color: var(--muted); }
+.article :global(.casequote) cite a { color: var(--muted); text-decoration: none; }
+.article :global(.casequote) cite a:hover { text-decoration: underline; }
+
+.article :global(.figure) { margin: 36px 0; }
+.article :global(.figure) figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 10px;
+  max-width: 62ch;
+  text-align: left;
+}
+.article :global(.chartwrap) { position: relative; }
+.article :global(.chartwrap) svg { width: 100%; height: auto; display: block; }
+.article :global(.gridline) { stroke: var(--hairline); stroke-width: 1; }
+.article :global(.axisline) { stroke: var(--muted); stroke-width: 1; }
+.article :global(.ticklabel) { font: 11px var(--mono); fill: var(--muted); }
+.article :global(.trendline) { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.article :global(.pointlabel) { font: 600 12px var(--mono); fill: var(--ink); }
+.article :global(.crosshair) { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.article :global(.hoverdot) { fill: var(--accent); stroke: var(--bg); stroke-width: 2; }
+.article :global(.tooltip) {
+  position: absolute;
+  transform: translate(-50%, -130%);
+  pointer-events: none;
+  background: var(--ink);
+  color: var(--bg);
+  font: 12px var(--mono);
+  padding: 4px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.article :global(.storyboard) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 32px 0;
+}
+.article :global(.storyboard) figure { margin: 0; }
+.article :global(.storyboard) svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--hairline);
+  background: var(--bg);
+}
+.article :global(.storyboard) figcaption { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+.article :global(.storyboard) text { font-family: var(--mono); fill: var(--ink); }
+.article :global(.sb-ink) { stroke: var(--ink); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.article :global(.sb-fill) { fill: var(--ink); }
+.article :global(.sb-accent) { fill: var(--accent); }
+.article :global(.sb-accent-line) { stroke: var(--accent); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+.article :global(.sb-bubble) { fill: var(--bg); stroke: var(--ink); stroke-width: 2; }
+.article :global(.sb-screen) { fill: #f4f2ec; stroke: var(--ink); stroke-width: 2.5; }
+
+.article :global(.pielegend) { list-style: none; padding: 0; margin: 0; min-width: 0; }
+.article :global(.pielegend) li {
+  display: grid;
+  grid-template-columns: 12px minmax(5.5rem, auto) 1fr auto;
+  gap: 10px;
+  align-items: baseline;
+  padding: 6px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.article :global(.pielegend) li:last-child { border-bottom: 0; }
+.article :global(.swatch) { width: 12px; height: 12px; display: inline-block; transform: translateY(1px); }
+.article :global(.legendkey) { font: 13.5px var(--mono); color: var(--ink); }
+
+.article :global(.videowrap) { margin: 28px 0 0; }
+.article :global(.videowrap) iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+.article :global(.videowrap) figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.article :global(.readby) { color: var(--muted); font-size: 15px; }
+.article :global(.source-note) { margin-top: 36px; font-size: 13.5px; color: var(--muted); }
+.article :global(.source-note) a { color: inherit; }
+
+@media (max-width: 600px) {
+  .article :global(.storyboard) { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .article :global(.ticklabel) { font-size: 16px; }
+  .article :global(.pointlabel) { font-size: 17px; }
+  .article :global(.pielegend) li { grid-template-columns: 12px 1fr auto; gap: 6px 10px; }
+}

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Toc from "@/components/Toc";
+import LibraryParts from "@/components/LibraryParts";
 import { library, team, site } from "@/content";
 import { fontVariables } from "@/lib/explainerFonts";
 import { slugify } from "@/lib/slugify";
@@ -32,12 +33,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const item = findItem(slug);
   if (!item) return { title: `Draft — ${site.name}`, robots: { index: false, follow: false } };
+  const title = item.articleTitle ?? item.title;
   return {
-    title: `${item.title} — ${site.name}`,
+    title: `${title} — ${site.name}`,
     alternates: { canonical: `/library/${slug}` },
     description: item.hook,
     openGraph: {
-      title: item.title,
+      title,
       description: item.hook,
       url: `/library/${slug}`,
       siteName: site.name,
@@ -46,7 +48,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: item.shareImage ? "summary_large_image" : "summary",
-      title: item.title,
+      title,
       description: item.hook,
       images: item.shareImage ? [item.shareImage] : undefined,
     },
@@ -110,7 +112,7 @@ export default async function TopicPage({
     <main className={`flex min-h-full flex-col ${fontVariables}`}>
       <Toc sections={sections} />
       <article className="writeup w-full">
-        <h1 id="top">{item?.title ?? "Template"}</h1>
+        <h1 id="top">{item?.articleTitle ?? item?.title ?? "Template"}</h1>
         {item?.author && (
           <p className="byline">
             by{" "}
@@ -124,6 +126,9 @@ export default async function TopicPage({
             {item.updated && `, ${formatDay(item.updated)}`}
           </p>
         )}
+        {item?.parts?.length ? (
+          <LibraryParts title={item.title} parts={item.parts} currentHref={`/library/${slug}`} />
+        ) : null}
         {sections.length > 0 && (
           <nav className="toc-inline" aria-label="Contents">
             <p>Contents</p>

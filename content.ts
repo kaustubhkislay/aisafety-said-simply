@@ -6,10 +6,20 @@ export type Audience = "Policymakers" | "Educators" | "Public";
 export const topics = ["Technical", "Research", "Policy"] as const;
 export type Topic = (typeof topics)[number];
 
+export type LibraryPart = {
+  format: Format;
+  href: string;
+  description: string;
+};
+
 export type LibraryItem = {
   title: string;
+  /** Original article title when the catalog groups several parts under one topic. */
+  articleTitle?: string;
   hook: string;
   formats: Format[];
+  /** Individually linked parts of a single library entry. */
+  parts?: LibraryPart[];
   audiences: Audience[];
   topics: Topic[];
   status: "live" | "in-production";
@@ -196,15 +206,32 @@ export const faq: FaqItem[] = [
 
 export const library: LibraryItem[] = [
   {
-    title: "Reward hacking",
-    hook: "AI systems sometimes find shortcuts that score well without doing the intended task. A searchable collection of reward hacking in the wild.",
-    formats: ["Explainer", "Demo"],
+    title: "Reward Hacking",
+    articleTitle: "Your AIs don't do what you want. This is really bad",
+    hook: "models aren't pursuing objectives authentically, and often opt to \"game\" or \"hack\" to maximize their reward",
+    formats: ["Demo", "Explainer"],
+    parts: [
+      {
+        format: "Demo",
+        href: "https://rewardhacking.org",
+        description: "Search a collection of user reports about AI agents that fake success, override safeguards, and cause harm.",
+      },
+      {
+        format: "Explainer",
+        href: "/library/reward-hacking",
+        description: "Read how reward hacking and reward-seeking behavior arise, and why they matter.",
+      },
+    ],
     audiences: ["Policymakers", "Educators", "Public"],
     topics: ["Technical"],
-    aliases: ["what is reward hacking?", "examples of AI gaming its objectives"],
+    aliases: ["what is reward hacking?", "what is reward seeking?", "why does AI fake success?", "examples of AI gaming its objectives"],
     status: "live",
-    url: "https://rewardhacking.org",
+    slug: "reward-hacking",
+    author: "Kaustubh Kislay",
+    readingMinutes: 6,
+    updated: "2026-07-22",
     image: "/library/reward-hacking/thumb.svg",
+    shareImage: "/library/reward-hacking/og.png",
   },
   {
     title: "Sleeper agents & secret loyalties",
@@ -314,6 +341,7 @@ export const team: TeamMember[] = [
     bio: "Kaustubh is the director of the Wisconsin AI Safety Initiative. He is a generalist with a background in technical AI safety research focused on AI control and reward hacking.",
     photo: "/team/kaustubh.webp",
     url: "https://www.linkedin.com/in/kaustubh-kislay/",
+    website: "https://kaustubhais.com",
     calendly: "https://calendly.com/kaustubh-kislay/15min",
     email: "kaustubh@aisaidsimply.com",
   },

@@ -1,0 +1,699 @@
+{
+  "monthly": [
+    {
+      "month": "2010-10",
+      "n": 2
+    },
+    {
+      "month": "2011-08",
+      "n": 1
+    },
+    {
+      "month": "2011-12",
+      "n": 1
+    },
+    {
+      "month": "2013-11",
+      "n": 1
+    },
+    {
+      "month": "2014-02",
+      "n": 1
+    },
+    {
+      "month": "2014-03",
+      "n": 1
+    },
+    {
+      "month": "2014-10",
+      "n": 1
+    },
+    {
+      "month": "2015-04",
+      "n": 1
+    },
+    {
+      "month": "2015-10",
+      "n": 1
+    },
+    {
+      "month": "2016-01",
+      "n": 2
+    },
+    {
+      "month": "2016-09",
+      "n": 3
+    },
+    {
+      "month": "2017-01",
+      "n": 1
+    },
+    {
+      "month": "2017-12",
+      "n": 1
+    },
+    {
+      "month": "2018-05",
+      "n": 1
+    },
+    {
+      "month": "2020-05",
+      "n": 1
+    },
+    {
+      "month": "2020-07",
+      "n": 1
+    },
+    {
+      "month": "2021-06",
+      "n": 1
+    },
+    {
+      "month": "2021-10",
+      "n": 1
+    },
+    {
+      "month": "2021-12",
+      "n": 1
+    },
+    {
+      "month": "2022-05",
+      "n": 2
+    },
+    {
+      "month": "2022-12",
+      "n": 4
+    },
+    {
+      "month": "2023-01",
+      "n": 1
+    },
+    {
+      "month": "2023-02",
+      "n": 1
+    },
+    {
+      "month": "2023-03",
+      "n": 4
+    },
+    {
+      "month": "2023-04",
+      "n": 2
+    },
+    {
+      "month": "2023-05",
+      "n": 1
+    },
+    {
+      "month": "2023-06",
+      "n": 1
+    },
+    {
+      "month": "2023-07",
+      "n": 4
+    },
+    {
+      "month": "2023-08",
+      "n": 2
+    },
+    {
+      "month": "2023-09",
+      "n": 1
+    },
+    {
+      "month": "2023-11",
+      "n": 1
+    },
+    {
+      "month": "2023-12",
+      "n": 4
+    },
+    {
+      "month": "2024-01",
+      "n": 1
+    },
+    {
+      "month": "2024-02",
+      "n": 1
+    },
+    {
+      "month": "2024-03",
+      "n": 1
+    },
+    {
+      "month": "2024-04",
+      "n": 3
+    },
+    {
+      "month": "2024-05",
+      "n": 2
+    },
+    {
+      "month": "2024-06",
+      "n": 2
+    },
+    {
+      "month": "2024-07",
+      "n": 5
+    },
+    {
+      "month": "2024-08",
+      "n": 6
+    },
+    {
+      "month": "2024-09",
+      "n": 3
+    },
+    {
+      "month": "2024-10",
+      "n": 7
+    },
+    {
+      "month": "2024-11",
+      "n": 3
+    },
+    {
+      "month": "2024-12",
+      "n": 6
+    },
+    {
+      "month": "2025-01",
+      "n": 12
+    },
+    {
+      "month": "2025-02",
+      "n": 9
+    },
+    {
+      "month": "2025-03",
+      "n": 17
+    },
+    {
+      "month": "2025-04",
+      "n": 20
+    },
+    {
+      "month": "2025-05",
+      "n": 33
+    },
+    {
+      "month": "2025-06",
+      "n": 36
+    },
+    {
+      "month": "2025-07",
+      "n": 62
+    },
+    {
+      "month": "2025-08",
+      "n": 92
+    },
+    {
+      "month": "2025-09",
+      "n": 79
+    },
+    {
+      "month": "2025-10",
+      "n": 79
+    },
+    {
+      "month": "2025-11",
+      "n": 85
+    },
+    {
+      "month": "2025-12",
+      "n": 97
+    },
+    {
+      "month": "2026-01",
+      "n": 162
+    },
+    {
+      "month": "2026-02",
+      "n": 245
+    },
+    {
+      "month": "2026-03",
+      "n": 466
+    },
+    {
+      "month": "2026-04",
+      "n": 511
+    },
+    {
+      "month": "2026-05",
+      "n": 578
+    },
+    {
+      "month": "2026-06",
+      "n": 536
+    },
+    {
+      "month": "2026-07",
+      "n": 397
+    }
+  ],
+  "monthly_severity": [
+    {
+      "month": "2010-10",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 1,
+      "severe": 0
+    },
+    {
+      "month": "2011-08",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2011-12",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2013-11",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2014-02",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2014-03",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2014-10",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2015-04",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2015-10",
+      "negligible": 0,
+      "minor": 0,
+      "significant": 1,
+      "severe": 0
+    },
+    {
+      "month": "2016-01",
+      "negligible": 2,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2016-09",
+      "negligible": 3,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2017-01",
+      "negligible": 0,
+      "minor": 1,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2017-12",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2018-05",
+      "negligible": 0,
+      "minor": 0,
+      "significant": 0,
+      "severe": 1
+    },
+    {
+      "month": "2020-05",
+      "negligible": 0,
+      "minor": 0,
+      "significant": 0,
+      "severe": 1
+    },
+    {
+      "month": "2020-07",
+      "negligible": 0,
+      "minor": 1,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2021-06",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2021-10",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2021-12",
+      "negligible": 0,
+      "minor": 0,
+      "significant": 1,
+      "severe": 0
+    },
+    {
+      "month": "2022-05",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 1
+    },
+    {
+      "month": "2022-12",
+      "negligible": 4,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-01",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-02",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-03",
+      "negligible": 4,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-04",
+      "negligible": 2,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-05",
+      "negligible": 0,
+      "minor": 1,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-06",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-07",
+      "negligible": 4,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-08",
+      "negligible": 2,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-09",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-11",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2023-12",
+      "negligible": 4,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-01",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-02",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-03",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-04",
+      "negligible": 1,
+      "minor": 2,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-05",
+      "negligible": 2,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-06",
+      "negligible": 2,
+      "minor": 0,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-07",
+      "negligible": 2,
+      "minor": 1,
+      "significant": 2,
+      "severe": 0
+    },
+    {
+      "month": "2024-08",
+      "negligible": 5,
+      "minor": 0,
+      "significant": 1,
+      "severe": 0
+    },
+    {
+      "month": "2024-09",
+      "negligible": 2,
+      "minor": 1,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-10",
+      "negligible": 5,
+      "minor": 2,
+      "significant": 0,
+      "severe": 0
+    },
+    {
+      "month": "2024-11",
+      "negligible": 1,
+      "minor": 0,
+      "significant": 2,
+      "severe": 0
+    },
+    {
+      "month": "2024-12",
+      "negligible": 4,
+      "minor": 1,
+      "significant": 1,
+      "severe": 0
+    },
+    {
+      "month": "2025-01",
+      "negligible": 7,
+      "minor": 3,
+      "significant": 2,
+      "severe": 0
+    },
+    {
+      "month": "2025-02",
+      "negligible": 7,
+      "minor": 1,
+      "significant": 1,
+      "severe": 0
+    },
+    {
+      "month": "2025-03",
+      "negligible": 11,
+      "minor": 4,
+      "significant": 2,
+      "severe": 0
+    },
+    {
+      "month": "2025-04",
+      "negligible": 15,
+      "minor": 3,
+      "significant": 2,
+      "severe": 0
+    },
+    {
+      "month": "2025-05",
+      "negligible": 22,
+      "minor": 7,
+      "significant": 3,
+      "severe": 1
+    },
+    {
+      "month": "2025-06",
+      "negligible": 20,
+      "minor": 10,
+      "significant": 5,
+      "severe": 1
+    },
+    {
+      "month": "2025-07",
+      "negligible": 30,
+      "minor": 19,
+      "significant": 9,
+      "severe": 4
+    },
+    {
+      "month": "2025-08",
+      "negligible": 50,
+      "minor": 31,
+      "significant": 11,
+      "severe": 0
+    },
+    {
+      "month": "2025-09",
+      "negligible": 45,
+      "minor": 21,
+      "significant": 9,
+      "severe": 4
+    },
+    {
+      "month": "2025-10",
+      "negligible": 36,
+      "minor": 26,
+      "significant": 16,
+      "severe": 1
+    },
+    {
+      "month": "2025-11",
+      "negligible": 42,
+      "minor": 28,
+      "significant": 10,
+      "severe": 4
+    },
+    {
+      "month": "2025-12",
+      "negligible": 37,
+      "minor": 38,
+      "significant": 16,
+      "severe": 6
+    },
+    {
+      "month": "2026-01",
+      "negligible": 67,
+      "minor": 67,
+      "significant": 25,
+      "severe": 2
+    },
+    {
+      "month": "2026-02",
+      "negligible": 97,
+      "minor": 94,
+      "significant": 45,
+      "severe": 9
+    },
+    {
+      "month": "2026-03",
+      "negligible": 159,
+      "minor": 209,
+      "significant": 78,
+      "severe": 15
+    },
+    {
+      "month": "2026-04",
+      "negligible": 157,
+      "minor": 225,
+      "significant": 111,
+      "severe": 14
+    },
+    {
+      "month": "2026-05",
+      "negligible": 201,
+      "minor": 224,
+      "significant": 109,
+      "severe": 41
+    },
+    {
+      "month": "2026-06",
+      "negligible": 226,
+      "minor": 216,
+      "significant": 76,
+      "severe": 10
+    },
+    {
+      "month": "2026-07",
+      "negligible": 170,
+      "minor": 137,
+      "significant": 79,
+      "severe": 6
+    }
+  ]
+}
