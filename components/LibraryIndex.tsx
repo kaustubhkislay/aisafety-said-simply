@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { topics, type LibraryItem, type Topic } from "@/content";
+import LibraryParts from "@/components/LibraryParts";
 
 // Styled by the `.library-index` rules in app/globals.css.
 
@@ -12,6 +13,7 @@ function href(item: LibraryItem) {
 }
 
 function Title({ item }: { item: LibraryItem }) {
+  if (item.parts?.length) return <>{item.title}</>;
   const to = href(item);
   if (!to) return <>{item.title}</>;
   if (item.slug) return <Link href={to}>{item.title}</Link>;
@@ -67,6 +69,7 @@ function Entry({ item }: { item: LibraryItem }) {
         </h2>
         {meta.length > 0 && <p className="meta">{meta.join(" · ")}</p>}
         <p className="hook">{item.hook}</p>
+        {item.parts?.length ? <LibraryParts title={item.title} parts={item.parts} /> : null}
       </div>
       {item.image && to && (
         <a

@@ -278,6 +278,20 @@ button:not(:disabled) { cursor: pointer; }
 .library-index .hook { margin: 0; max-width: 60ch; font-size: 17px; line-height: 1.6; }
 .library-index .thumb img { display: block; width: 100%; height: auto; }
 
+/* Paired formats share one catalog entry and keep separate destinations. */
+.library-parts ol { list-style: none; margin: 0; padding: 0; }
+.library-parts li { margin: 0; }
+.library-parts li + li { margin-top: 16px; }
+.library-parts a { color: inherit; font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.library-parts a:hover { text-decoration-thickness: 2px; }
+.library-parts a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.library-parts p { margin: 4px 0 0; max-width: 52ch; font-size: 15px; line-height: 1.45; }
+.library-parts-compact ol { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.library-parts-compact li + li { margin-top: 0; }
+.library-index .library-parts { margin-top: 18px; }
+.writeup .library-parts { margin: 0 0 32px; padding: 16px 0; border-block: 1px solid var(--writeup-hairline); }
+.writeup .library-parts p { font-size: 15px; margin: 4px 0 0; }
+
 
 @media (max-width: 900px) {
   .library-index header { margin-left: 0; }
