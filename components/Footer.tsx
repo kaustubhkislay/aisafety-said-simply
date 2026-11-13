@@ -41,6 +41,14 @@ export default function Footer() {
               Careers
             </Link>
             <a
+              href={site.substack}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cream opacity-90 hover:underline"
+            >
+              Substack
+            </a>
+            <a
               href={`mailto:${site.contactEmail}`}
               className="text-cream opacity-90 hover:underline"
             >

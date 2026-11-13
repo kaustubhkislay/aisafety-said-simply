@@ -30,6 +30,14 @@ export default function Nav() {
               {label}
             </Link>
           ))}
+          <a
+            href={site.substack}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-semibold uppercase tracking-[0.06em] text-ink-2 hover:underline"
+          >
+            Substack
+          </a>
           <Link
             href="/contact#mailing-list"
             className="rounded-card bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.06em] whitespace-nowrap text-cream transition-opacity duration-150 ease-out hover:opacity-90"
