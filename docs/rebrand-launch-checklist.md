@@ -53,7 +53,7 @@ The user authorized autonomous execution of the rebrand on 4 November 2026. The 
 | WAISI | Research entry renamed and verified live. Commit `8190cab`; safety description unchanged. | [Research page](https://waisi.org/research) |
 | SPAR | Draft request only; listing owner must edit | [Project](https://www.sparai.org/projects/f26/recK4NKaFBvAEznFB/) |
 
-Do not activate the YouTube, Instagram, or Substack placeholders without a verified account.
+Do not activate the YouTube or Instagram placeholders without a verified account. Substack is live at https://aisaidsimply.substack.com.
 
 ## Draft communications — not sent
 
