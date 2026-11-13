@@ -247,7 +247,7 @@ button:not(:disabled) { cursor: pointer; }
   color: var(--color-ink);
 }
 
-.library-layout { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 40px; align-items: start; margin-top: 3rem; }
+.library-layout { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 32px; align-items: start; margin-top: 3rem; }
 .library-index .rail { position: sticky; top: 7rem; }
 .library-index .rail ul { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--writeup-hairline); }
 .library-index .rail button { display: block; width: 100%; padding: 5px 0 5px 16px; margin-left: -1px; border: 0; border-left: 2px solid transparent; text-align: left; font-size: 15px; color: var(--writeup-muted); background: none; cursor: pointer; }
@@ -257,7 +257,7 @@ button:not(:disabled) { cursor: pointer; }
 .library-index .entries { margin: 0; padding: 0; list-style: none; }
 .library-index .entry { display: grid; gap: 32px; padding: 0 0 32px; margin: 0 0 32px; }
 .library-index .entry:last-child { margin-bottom: 8px; }
-.library-index .entry.has-image { grid-template-columns: minmax(0, 1fr) 240px; }
+.library-index .entry.has-image { grid-template-columns: minmax(0, 1fr) 280px; }
 .library-index .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
 .library-index .tag { padding: 1px 8px; font-size: 13px; color: var(--writeup-muted); border: 1px solid var(--writeup-hairline); }
 .library-index .tag.format { color: var(--color-ink); background: var(--color-paper-2); border-color: transparent; }
