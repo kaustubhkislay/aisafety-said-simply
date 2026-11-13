@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import LibraryIndex from "@/components/LibraryIndex";
 import { site, library } from "@/content";
-import { fontVariables } from "@/lib/explainerFonts";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/library" },
@@ -18,7 +17,7 @@ const ordered = [...library].sort((a, b) =>
 
 export default function LibraryPage() {
   return (
-    <main className={`flex min-h-full flex-col ${fontVariables}`}>
+    <main className="flex min-h-full flex-col">
       <div className="library-index">
         <header>
           <h1>Library</h1>
