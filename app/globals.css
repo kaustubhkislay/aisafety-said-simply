@@ -71,6 +71,22 @@ section[id] { scroll-margin-top: 7rem; }
   letter-spacing: -.055em;
 }
 
+/* Inner pages (library, resources, team, careers, contact) are set in Inter.
+   The footer inside them goes back to Helvetica to match the nav. */
+.page-fonts {
+  --font-display: var(--font-inter), Helvetica, Arial, sans-serif;
+  --font-body: var(--font-inter), Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-inter), Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
+}
+.page-fonts :is(h1, h2, h3) { font-weight: 600; letter-spacing: -0.04em; }
+.page-fonts footer {
+  --font-display: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-body: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
+}
+
 /* Section labels organize the content without divider rules. */
 .section-index {
   display: block;

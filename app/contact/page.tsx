@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SignupForm from "@/components/SignupForm";
 import FeedbackForm from "@/components/FeedbackForm";
 import { site } from "@/content";
+import { pageFonts } from "@/lib/pageFonts";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
@@ -20,7 +21,7 @@ const socialChannels = [
 
 export default function Contact() {
   return (
-    <main className="flex flex-1 flex-col">
+    <main className={`flex flex-1 flex-col ${pageFonts}`}>
       <div className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
         <header className="max-w-2xl">
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">

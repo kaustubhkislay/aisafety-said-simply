@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import { resources, site, type Resource } from "@/content";
+import { pageFonts } from "@/lib/pageFonts";
 
 const description =
   "Guides, maps and reading lists from AI Said Simply for people working on or around AI safety.";
@@ -50,7 +51,7 @@ function Card({ resource }: { resource: Resource }) {
 
 export default function Resources() {
   return (
-    <main className="flex flex-1 flex-col">
+    <main className={`flex flex-1 flex-col ${pageFonts}`}>
       <div className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
         <header className="max-w-2xl">
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">

@@ -3,6 +3,7 @@ import { site } from "@/content";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import MediaGuideRequestForm from "@/components/MediaGuideRequestForm";
+import { pageFonts } from "@/lib/pageFonts";
 
 const description =
   "A practical guide for students and university AI safety groups who receive media requests. Request a copy from AI Said Simply.";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function MediaGuide() {
   return (
-    <main className="flex flex-1 flex-col">
+    <main className={`flex flex-1 flex-col ${pageFonts}`}>
       <div className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
         <header className="max-w-2xl">
           <Link href="/resources" className="section-index text-muted hover:underline">

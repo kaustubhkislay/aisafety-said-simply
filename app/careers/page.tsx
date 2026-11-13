@@ -2,6 +2,7 @@ import { site } from "@/content";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import FormsEmbed from "@/components/FormsEmbed";
+import { pageFonts } from "@/lib/pageFonts";
 
 const description =
   "Help people understand AI safety. Explore the Explainer Writer volunteer role at AI Said Simply and apply.";
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Careers() {
   return (
-    <main className="flex flex-1 flex-col">
+    <main className={`flex flex-1 flex-col ${pageFonts}`}>
       <div className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
         <header className="max-w-2xl">
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">
