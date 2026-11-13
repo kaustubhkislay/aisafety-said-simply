@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Why from "@/components/Why";
 import Library from "@/components/Library";
+import Resources from "@/components/Resources";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Why />
       <Library />
+      <Resources />
       <Faq />
       <Footer />
     </main>

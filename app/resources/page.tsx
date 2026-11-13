@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import { resources, site, type Resource } from "@/content";
+import { resources, site } from "@/content";
+import ResourceCard from "@/components/ResourceCard";
 import { pageFonts } from "@/lib/pageFonts";
 
 const description =
@@ -19,36 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-function Card({ resource }: { resource: Resource }) {
-  const { title, description, href } = resource;
-  const inner = (
-    <div className="flex h-full items-start justify-between gap-4">
-      <div>
-        <h2 className="font-display text-2xl font-medium leading-snug text-ink">{title}</h2>
-        <p className="mt-3 leading-relaxed text-ink-2">{description}</p>
-        {!href && (
-          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.06em] text-muted">
-            Coming soon
-          </p>
-        )}
-      </div>
-      {href && (
-        <span aria-hidden="true" className="shrink-0 text-4xl font-normal leading-none">
-          &gt;
-        </span>
-      )}
-    </div>
-  );
-  const base = "block h-full rounded-card p-6 transition-colors duration-150 ease-out";
-  return href ? (
-    <Link href={href} className={`${base} bg-library-live hover:bg-library-live-hover`}>
-      {inner}
-    </Link>
-  ) : (
-    <div className={`${base} bg-paper-3`}>{inner}</div>
-  );
-}
-
 export default function Resources() {
   return (
     <main className={`flex flex-1 flex-col ${pageFonts}`}>
@@ -61,7 +31,7 @@ export default function Resources() {
         <ul className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource) => (
             <li key={resource.title}>
-              <Card resource={resource} />
+              <ResourceCard resource={resource} />
             </li>
           ))}
         </ul>
