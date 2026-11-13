@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import { site } from "@/content";
-import { focus, newsletters, organizations, startHere, updated, xList } from "@/content/policy-resources";
+import { newsletters, organizations, startHere, updated, xList } from "@/content/policy-resources";
 import { pageFonts } from "@/lib/pageFonts";
 import { slugify } from "@/lib/slugify";
 
@@ -10,11 +10,11 @@ const description =
   "Where to follow U.S. AI policy: organizations, think tanks, government offices, committees and newsletters.";
 
 export const metadata: Metadata = {
-  title: `Policy Resources — ${site.name}`,
+  title: `U.S. AI Policy Resources — ${site.name}`,
   description,
   alternates: { canonical: "/resources/policy" },
   openGraph: {
-    title: `Policy Resources — ${site.name}`,
+    title: `U.S. AI Policy Resources — ${site.name}`,
     description,
     url: "/resources/policy",
     images: ["/opengraph-image.png"],
@@ -48,10 +48,9 @@ export default function PolicyResources() {
             Resources
           </Link>
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">
-            Policy Resources
+            U.S. AI Policy Resources
           </h1>
-          <p className="mt-6 leading-relaxed text-muted">{focus}</p>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.06em] text-hero-orange">
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.06em] text-hero-orange">
             Updated <time dateTime={updated}>{formatDate(updated)}</time>
           </p>
         </header>

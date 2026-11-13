@@ -194,9 +194,9 @@ export const resources: Resource[] = [
     description: "Where you could fit in AI safety, whatever your background, and how to take the first step.",
   },
   {
-    title: "Policy Resources",
+    title: "U.S. AI Policy Resources",
     description:
-      "Where to follow U.S. AI policy: the organizations, government offices, committees and newsletters worth knowing.",
+      "The organizations, government offices, committees and newsletters worth following.",
     href: "/resources/policy",
   },
 ];

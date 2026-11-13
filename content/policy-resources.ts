@@ -7,9 +7,6 @@ export type Group = { title: string; intro?: string; entries: Entry[] };
 
 export const updated = "2026-11-11";
 
-export const focus =
-  "Focus: United States policy, with selected international organizations.";
-
 export const startHere: { label: string; links: Link[] }[] = [
   {
     label: "Policy and research",
