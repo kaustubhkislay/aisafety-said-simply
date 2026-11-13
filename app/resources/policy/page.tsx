@@ -50,8 +50,9 @@ export default function PolicyResources() {
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">
             Policy Resources
           </h1>
-          <p className="mt-6 leading-relaxed text-muted">
-            {focus} Updated {formatDate(updated)}.
+          <p className="mt-6 leading-relaxed text-muted">{focus}</p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.06em] text-hero-orange">
+            Updated <time dateTime={updated}>{formatDate(updated)}</time>
           </p>
         </header>
 
