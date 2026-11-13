@@ -17,14 +17,12 @@ const ordered = [...library].sort((a, b) =>
 
 export default function LibraryPage() {
   return (
-    <main className="flex min-h-full flex-col">
-      <div className="library-index">
-        <header>
-          <h1>Library</h1>
-          <p className="intro">
-            Short explainers, interactive demos and videos on the ideas that
-            matter in AI safety.
-          </p>
+    <main className="flex flex-1 flex-col">
+      <div className="library-index mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
+        <header className="max-w-2xl">
+          <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">
+            Library
+          </h1>
         </header>
         <LibraryIndex items={ordered} />
       </div>

@@ -237,31 +237,20 @@ button:not(:disabled) { cursor: pointer; }
   .writeup .sidenote-term:has(input:checked) + .sidenote-note { display: inline; position: absolute; left: calc(100% + 8px); width: 220px; margin: 0; padding-left: 0; border: 0; font-size: 13.5px; }
 }
 
-/* Library index (modelled on secondlookresearch.com/replications): a sticky
-   topic rail beside a list of entries, each with tags, title, meta, hook and
-   an optional thumbnail. */
+/* Library index: a row of topic filters above a list of entries, each with
+   tags, title, meta, hook and an optional thumbnail. */
 .library-index {
   --writeup-muted: #6e6a61;
   --writeup-hairline: #00000029;
-  --rail: 200px;
-  --gap: 48px;
-  width: 100%;
-  max-width: 1022px;
-  margin: 0 auto;
-  padding: 44px 24px 96px;
   font-family: var(--font-sans);
   color: var(--color-ink);
 }
-.library-index header { margin: 0 0 40px calc(var(--rail) + var(--gap)); }
-.library-index h1 { margin: 0 0 12px; font-family: var(--font-display); font-size: clamp(48px, 6vw, 60px); font-weight: 500; line-height: 1; letter-spacing: -0.05em; }
-.library-index .intro { margin: 0; max-width: 56ch; font-size: 19px; line-height: 1.55; color: var(--writeup-muted); }
 
-.library-layout { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr); gap: var(--gap); align-items: start; }
-.library-index .rail { position: sticky; top: 7rem; }
-.library-index .rail ul { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--writeup-hairline); }
-.library-index .rail button { display: block; width: 100%; padding: 5px 0 5px 16px; margin-left: -1px; border-left: 2px solid transparent; text-align: left; font-size: 16px; color: var(--writeup-muted); background: none; cursor: pointer; }
+.library-layout { display: grid; gap: 40px; margin-top: 3rem; }
+.library-index .rail ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.library-index .rail button { padding: 5px 14px; font-size: 15px; color: var(--writeup-muted); background: none; border: 1px solid var(--writeup-hairline); cursor: pointer; }
 .library-index .rail button:hover { color: var(--color-ink); }
-.library-index .rail button[aria-pressed="true"] { color: var(--color-ink); border-left-color: var(--color-hero-orange); }
+.library-index .rail button[aria-pressed="true"] { color: #fff; background: var(--color-hero-orange); border-color: var(--color-hero-orange); }
 
 .library-index .entries { margin: 0; padding: 0; list-style: none; }
 .library-index .entry { display: grid; gap: 32px; padding: 0 0 32px; margin: 0 0 32px; }
@@ -291,17 +280,7 @@ button:not(:disabled) { cursor: pointer; }
 .writeup .library-parts { margin: 0 0 32px; padding: 16px 0; border-block: 1px solid var(--writeup-hairline); }
 .writeup .library-parts p { font-size: 15px; margin: 4px 0 0; }
 
-
-@media (max-width: 900px) {
-  .library-index header { margin-left: 0; }
-  .library-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .library-index .rail { position: static; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
-  .library-index .rail ul { display: flex; flex-wrap: wrap; gap: 8px; border: 0; }
-  .library-index .rail button { width: auto; margin: 0; padding: 5px 14px; border: 1px solid var(--writeup-hairline); }
-  .library-index .rail button[aria-pressed="true"] { color: #fff; background: var(--color-hero-orange); border-color: var(--color-hero-orange); }
-}
 @media (max-width: 640px) {
-  .library-index { padding-inline: 18px; }
   .library-index .entry.has-image { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .library-index .thumb { order: -1; }
 }
