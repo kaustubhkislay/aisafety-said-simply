@@ -192,6 +192,7 @@ export const resources: Resource[] = [
   {
     title: "Career Map",
     description: "Where you could fit in AI safety, whatever your background, and how to take the first step.",
+    href: "/resources/career-map",
   },
   {
     title: "U.S. AI Policy Resources",
