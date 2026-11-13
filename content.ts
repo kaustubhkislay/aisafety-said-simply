@@ -49,7 +49,6 @@ export const site = {
   description:
     "Short explainers, interactive demos, and videos about AI risks and how to address them — for policymakers, journalists, educators, and the public.",
   contactEmail: "contact@aisaidsimply.com",
-  substack: "https://aisaidsimply.substack.com",
 };
 
 export const audiences = [
