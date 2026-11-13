@@ -56,9 +56,6 @@ export default function Resources() {
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">
             Resources
           </h1>
-          <p className="mt-6 text-xl leading-relaxed text-ink-2">
-            Guides, maps and reading lists for people working on or around AI safety.
-          </p>
         </header>
         <ul className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource) => (

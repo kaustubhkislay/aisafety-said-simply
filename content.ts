@@ -186,16 +186,16 @@ export const resources: Resource[] = [
   {
     title: "Media Guide",
     description:
-      "A practical guide for students and university AI safety groups who receive media requests.",
+      "How to handle a press request: when to say yes, how to prepare, and what to do afterward.",
     href: "/resources/media-guide",
   },
   {
     title: "Career Map",
-    description: "The paths into AI safety work, and where to start on each.",
+    description: "Where you could fit in AI safety, whatever your background, and how to take the first step.",
   },
   {
     title: "Policy Resources",
-    description: "Reading lists and references for people working on AI policy.",
+    description: "The reports, laws and trackers worth knowing if you follow AI policy.",
   },
 ];
 
