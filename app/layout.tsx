@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "@/components/Nav";
+import NavGate from "@/components/NavGate";
 import "./globals.css";
 import { site } from "@/content";
 
@@ -33,7 +34,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
-        <Nav />
+        <NavGate>
+          <Nav />
+        </NavGate>
         {children}
         <Analytics />
         <SpeedInsights />
