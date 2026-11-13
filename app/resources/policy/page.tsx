@@ -22,7 +22,8 @@ export const metadata: Metadata = {
 };
 
 const external = { target: "_blank", rel: "noopener noreferrer" } as const;
-const linkClass = "underline decoration-line-2 underline-offset-4 hover:decoration-ink";
+const linkClass =
+  "underline decoration-line-2 underline-offset-4 transition-colors hover:text-hero-orange hover:decoration-hero-orange";
 
 const sections = [
   { id: "newsletters", label: "Newsletters" },
@@ -54,7 +55,7 @@ export default function PolicyResources() {
           </p>
         </header>
 
-        <section aria-labelledby="start-heading" className="mt-10 bg-paper-2 p-6 sm:p-8">
+        <section aria-labelledby="start-heading" className="mt-10 border-l-4 border-hero-orange bg-[#fde3cf] p-6 sm:p-8">
           <h2 id="start-heading" className="text-2xl font-medium tracking-tight">
             Start here
           </h2>
@@ -91,7 +92,7 @@ export default function PolicyResources() {
               <li key={id}>
                 <a
                   href={`#${id}`}
-                  className="inline-block border border-line px-3 py-1.5 text-sm text-ink-2 hover:border-ink"
+                  className="inline-block border border-line px-3 py-1.5 text-sm text-ink-2 transition-colors hover:border-hero-orange hover:bg-hero-orange hover:text-white"
                 >
                   {label}
                 </a>
@@ -102,6 +103,7 @@ export default function PolicyResources() {
 
         <section id="newsletters" aria-labelledby="newsletters-heading" className="mt-14">
           <h2 id="newsletters-heading" className="text-3xl font-medium tracking-tight">
+            <span aria-hidden="true" className="mr-3 inline-block h-3 w-3 bg-hero-orange align-middle" />
             Newsletters
           </h2>
           <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -115,12 +117,15 @@ export default function PolicyResources() {
           </ul>
         </section>
 
-        <h2 className="mt-16 text-3xl font-medium tracking-tight">Organizations to keep track of</h2>
+        <h2 className="mt-16 text-3xl font-medium tracking-tight">
+          <span aria-hidden="true" className="mr-3 inline-block h-3 w-3 bg-hero-orange align-middle" />
+          Organizations to keep track of
+        </h2>
         {organizations.map((group) => {
           const id = slugify(group.title);
           return (
             <section key={id} id={id} aria-labelledby={`${id}-heading`} className="mt-10">
-              <h3 id={`${id}-heading`} className="text-xl font-medium tracking-tight">
+              <h3 id={`${id}-heading`} className="border-l-4 border-hero-orange pl-3 text-xl font-medium tracking-tight">
                 {group.title}
               </h3>
               {group.intro && <p className="mt-2 max-w-2xl leading-relaxed text-muted">{group.intro}</p>}
