@@ -195,7 +195,9 @@ export const resources: Resource[] = [
   },
   {
     title: "Policy Resources",
-    description: "The reports, laws and trackers worth knowing if you follow AI policy.",
+    description:
+      "Where to follow U.S. AI policy: the organizations, government offices, committees and newsletters worth knowing.",
+    href: "/resources/policy",
   },
 ];
 
