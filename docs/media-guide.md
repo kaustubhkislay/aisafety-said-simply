@@ -1,6 +1,6 @@
 # Media guide requests
 
-The `/media-guide` page describes the student media guide without publishing the
+The `/resources/media-guide` page (`/media-guide` redirects there) describes the student media guide without publishing the
 guide, excerpts, exercises, source document URL, or download link. The navigation
 and footer link to the page.
 

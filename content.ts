@@ -175,6 +175,30 @@ export const involvementForms: InvolvementForm[] = [
   },
 ];
 
+export type Resource = {
+  title: string;
+  description: string;
+  /** Path to the resource's page; omit while it is still being made. */
+  href?: string;
+};
+
+export const resources: Resource[] = [
+  {
+    title: "Media Guide",
+    description:
+      "A practical guide for students and university AI safety groups who receive media requests.",
+    href: "/resources/media-guide",
+  },
+  {
+    title: "Career Map",
+    description: "The paths into AI safety work, and where to start on each.",
+  },
+  {
+    title: "Policy Resources",
+    description: "Reading lists and references for people working on AI policy.",
+  },
+];
+
 export type FaqItem = { q: string; a: string };
 
 export const faq: FaqItem[] = [

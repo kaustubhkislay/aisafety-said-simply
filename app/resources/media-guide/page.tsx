@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/content";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
@@ -9,11 +10,11 @@ const description =
 export const metadata: Metadata = {
   title: `Media guide — ${site.name}`,
   description,
-  alternates: { canonical: "/media-guide" },
+  alternates: { canonical: "/resources/media-guide" },
   openGraph: {
     title: `Media guide — ${site.name}`,
     description,
-    url: "/media-guide",
+    url: "/resources/media-guide",
     images: ["/opengraph-image.png"],
   },
 };
@@ -23,6 +24,9 @@ export default function MediaGuide() {
     <main className="flex flex-1 flex-col">
       <div className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-16">
         <header className="max-w-2xl">
+          <Link href="/resources" className="section-index text-muted hover:underline">
+            Resources
+          </Link>
           <h1 className="font-display text-5xl font-medium tracking-[-0.05em] sm:text-6xl">
             Media guide
           </h1>
