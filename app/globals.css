@@ -237,8 +237,9 @@ button:not(:disabled) { cursor: pointer; }
   .writeup .sidenote-term:has(input:checked) + .sidenote-note { display: inline; position: absolute; left: calc(100% + 8px); width: 220px; margin: 0; padding-left: 0; border: 0; font-size: 13.5px; }
 }
 
-/* Library index: a row of topic filters above a list of entries, each with
-   tags, title, meta, hook and an optional thumbnail. */
+/* Library index: a topic rail beside a list of entries (a row of filters on
+   narrow screens), each with tags, title, meta, hook and an optional
+   thumbnail. */
 .library-index {
   --writeup-muted: #6e6a61;
   --writeup-hairline: #00000029;
@@ -246,16 +247,17 @@ button:not(:disabled) { cursor: pointer; }
   color: var(--color-ink);
 }
 
-.library-layout { display: grid; gap: 40px; margin-top: 3rem; }
-.library-index .rail ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.library-index .rail button { padding: 5px 14px; font-size: 15px; color: var(--writeup-muted); background: none; border: 1px solid var(--writeup-hairline); cursor: pointer; }
+.library-layout { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 40px; align-items: start; margin-top: 3rem; }
+.library-index .rail { position: sticky; top: 7rem; }
+.library-index .rail ul { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--writeup-hairline); }
+.library-index .rail button { display: block; width: 100%; padding: 5px 0 5px 16px; margin-left: -1px; border: 0; border-left: 2px solid transparent; text-align: left; font-size: 15px; color: var(--writeup-muted); background: none; cursor: pointer; }
 .library-index .rail button:hover { color: var(--color-ink); }
-.library-index .rail button[aria-pressed="true"] { color: #fff; background: var(--color-hero-orange); border-color: var(--color-hero-orange); }
+.library-index .rail button[aria-pressed="true"] { color: var(--color-ink); border-left-color: var(--color-hero-orange); }
 
 .library-index .entries { margin: 0; padding: 0; list-style: none; }
 .library-index .entry { display: grid; gap: 32px; padding: 0 0 32px; margin: 0 0 32px; }
 .library-index .entry:last-child { margin-bottom: 8px; }
-.library-index .entry.has-image { grid-template-columns: minmax(0, 1fr) 280px; }
+.library-index .entry.has-image { grid-template-columns: minmax(0, 1fr) 240px; }
 .library-index .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
 .library-index .tag { padding: 1px 8px; font-size: 13px; color: var(--writeup-muted); border: 1px solid var(--writeup-hairline); }
 .library-index .tag.format { color: var(--color-ink); background: var(--color-paper-2); border-color: transparent; }
@@ -280,6 +282,13 @@ button:not(:disabled) { cursor: pointer; }
 .writeup .library-parts { margin: 0 0 32px; padding: 16px 0; border-block: 1px solid var(--writeup-hairline); }
 .writeup .library-parts p { font-size: 15px; margin: 4px 0 0; }
 
+@media (max-width: 900px) {
+  .library-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .library-index .rail { position: static; }
+  .library-index .rail ul { display: flex; flex-wrap: wrap; gap: 8px; border: 0; }
+  .library-index .rail button { width: auto; margin: 0; padding: 5px 14px; border: 1px solid var(--writeup-hairline); }
+  .library-index .rail button[aria-pressed="true"] { color: #fff; background: var(--color-hero-orange); border-color: var(--color-hero-orange); }
+}
 @media (max-width: 640px) {
   .library-index .entry.has-image { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .library-index .thumb { order: -1; }
