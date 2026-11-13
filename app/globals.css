@@ -71,7 +71,7 @@ section[id] { scroll-margin-top: 7rem; }
   letter-spacing: -.055em;
 }
 
-/* Inner pages (library, resources, team, careers, contact) are set in Inter.
+/* Inner pages and the homepage below the hero are set in Inter.
    The footer inside them goes back to Helvetica to match the nav. */
 .page-fonts {
   --font-display: var(--font-inter), Helvetica, Arial, sans-serif;

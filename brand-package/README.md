@@ -17,7 +17,7 @@ The horizontal logo matches the website: a 36-unit yarn mark, a 3-unit gap, and 
 
 ## Typography
 
-Helvetica is the main font, used for the logo, menu, footer and homepage. Inner pages (Library, Resources, Team, Careers, Contact) use Inter, free on Google Fonts, with semibold titles. The hero uses Redaction 35 Regular for “Complex AI topics,” and Helvetica for “said simply.” Keep the font texture static. Helvetica font files are not included. License Helvetica separately if needed. Redaction and Noto license notices are included.
+Helvetica is used for the logo, menu and footer. Page content (the homepage below the hero, and the Library, Resources, Team, Careers and Contact pages) uses Inter, free on Google Fonts, with semibold titles. The hero uses Redaction 35 Regular for “Complex AI topics,” and Helvetica for “said simply.” Keep the font texture static. Helvetica font files are not included. License Helvetica separately if needed. Redaction and Noto license notices are included.
 
 For long-form reading, such as the explainers in the library, there is a serif option: Georgia for headings and Newsreader for body text, with IBM Plex Mono for transcripts. Newsreader and IBM Plex Mono are free on Google Fonts. Use the serif option inside explainers only. Everywhere else, including the library listing, uses Helvetica or Inter as above.
 
